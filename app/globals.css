@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-light: #1C2541;
+  --color-navy: #0B132B;
+  --color-navy-dark: #050914;
+
+  --color-gold-light: #F3E5AB;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA8C2C;
+}
+
+body {
+  @apply bg-navy-dark text-white antialiased;
+}
