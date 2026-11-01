@@ -81,6 +81,7 @@
         "title": "Elevator Ecosystem",
         "role": "全栈开发负责人兼系统架构师",
         "organization": "A.manage / Shopbot",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "description": [
           "主导企业级 Monorepo 架构，无缝集成 Next.js/FastAPI 门户与 Flutter 移动端。",
           "贯彻整洁架构、BLoC 状态管理与基于 FIFO 的离线队列机制。",

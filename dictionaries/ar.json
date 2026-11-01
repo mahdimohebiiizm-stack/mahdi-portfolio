@@ -81,6 +81,7 @@
         "title": "Elevator Ecosystem",
         "role": "مطور رئيسي ومهندس أنظمة",
         "organization": "A.manage / Shopbot",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "description": [
           "هندسة مستودع موحد (Monorepo) يجمع بين بوابة Next.js/FastAPI وتطبيق Flutter.",
           "تطبيق Clean Architecture ونمط BLoC وتدفق بيانات Offline-First بترتيب FIFO.",

@@ -81,6 +81,7 @@
         "title": "Elevator Ecosystem",
         "role": "Lead Full-Stack Developer & System Architect",
         "organization": "A.manage / Shopbot",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "description": [
           "معماری مونو‌ریپوی سازمانی یکپارچه‌کننده پورتال وب Next.js/FastAPI و اپلیکیشن موبایل Flutter.",
           "پیاده‌سازی Clean Architecture، الگوی BLoC و صف‌بندی Offline-First با ساختار FIFO.",

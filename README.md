@@ -33,15 +33,15 @@
 
 ## 1. Architectural Philosophy
 
-The repository was constructed under rigorous engineering specifications to guarantee performance, strict type safety, zero runtime errors, and deterministic deployments:
+This repository is engineered with a focus on high runtime performance, strict type safety, and predictable deployments:
 
-* **Zero-Debt Architecture:** No placeholder code (`TODO`), complete elimination of the `any` type, and strict end-to-end schema validation.
-* **Component-Driven Development:** Clear isolation between reusable atomic primitives (`components/ui/`), motion wrappers (`components/ui/motion/`), and orchestrator sectional views (`components/sections/`).
-* **Server-First Execution:** Server Components are utilized by default to eliminate client-side JavaScript overhead. Client Components (`"use client"`) are strictly isolated to interactive leaves.
-* **Dual-Layer Validation:** Form inputs are validated synchronously on the client side for instantaneous feedback and re-validated on the server side inside Server Actions using a shared Zod schema.
-* **Native Zero-Dependency 5-Language i18n:** Fully localized routing supporting Persian (`fa`), English (`en`), Arabic (`ar`), Chinese (`zh`), and Russian (`ru`) with dynamic language negotiation, locale cookies, and zero bundle-bloating third-party libraries.
-* **Bidirectional Layout Engineering:** Native RTL flow for Persian and Arabic via Google Fonts (`Vazirmatn`) and Tailwind CSS logical properties, with strict LTR isolation for simulated code environments.
-* **Corporate Luxury Visual Identity:** Custom Navy (`#0B132B`) and Gold (`#D4AF37`) palette with hardware-accelerated Glassmorphism.
+* **Zero-Debt Architecture:** Elimination of `TODO` placeholders, strict avoidance of the `any` type, and end-to-end schema validation.
+* **Component-Driven Development:** Clear separation between reusable atomic primitives (`components/ui/`), animation wrappers (`components/ui/motion/`), and domain section views (`components/sections/`).
+* **Server-First Execution:** React Server Components by default to minimize client bundle size. Client Components (`"use client"`) are isolated to interactive leaves.
+* **Dual-Layer Validation:** Client-side validation for instant user feedback paired with server-side validation inside Server Actions using a shared Zod schema.
+* **Native Zero-Dependency 5-Language i18n:** Lightweight routing supporting Persian (`fa`), English (`en`), Arabic (`ar`), Chinese (`zh`), and Russian (`ru`) using App Router dynamics, locale cookies, and native dictionary imports without heavy external dependencies.
+* **Bidirectional Layout Engineering:** Native RTL flow for Persian and Arabic via Google Fonts (`Vazirmatn`) and Tailwind CSS logical properties, with explicit LTR containment for code blocks and email fields.
+* **Premium Enterprise Visual Identity:** Custom Navy (`#0B132B`) and Gold (`#D4AF37`) palette with hardware-accelerated Glassmorphism.
 
 ---
 
@@ -54,33 +54,33 @@ The repository was constructed under rigorous engineering specifications to guar
 | **Library** | React 19.3.0 | Server Components, `useActionState`, Transitions |
 | **Styling** | Tailwind CSS v4 | Engine-level `@theme` tokens, `@tailwindcss/postcss`, Webpack |
 | **Typography** | Vazirmatn | `next/font/google`, Subsets: Arabic, Latin with system fallbacks |
-| **Animations** | Framer Motion | High-performance staggered entrances & scroll-reveal triggers |
+| **Animations** | Framer Motion | Orchestrated entrances & scroll-reveal transitions |
 | **Language** | TypeScript 5.x | Strict mode enabled (`strict: true`, `noImplicitAny: true`) |
 
 ### Localization, State, Validation & Server Actions
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
 | **i18n Engine** | Native Dynamic Routing | JSON Dictionaries, locale negotiation, `generateStaticParams` |
-| **Validation** | Zod 4.x | Shared input schema across client and server runtimes |
+| **Validation** | Zod 4.x | Shared schema validation across client and server |
 | **Form Management**| React Hook Form | Uncontrolled form inputs with `@hookform/resolvers/zod` |
-| **Server Logic** | Server Actions | Secure backend execution via Next.js `"use server"` |
-| **Email Service** | Resend API SDK | Enterprise email forwarding with custom dark-themed RTL HTML |
+| **Server Logic** | Server Actions | Backend execution via Next.js `"use server"` |
+| **Email Service** | Resend API SDK | Transactional email forwarding with responsive dark-mode HTML |
 
 ### Infrastructure, PWA & SEO
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
-| **PWA Engine** | Serwist 9.5.x | Modern Service Worker runtime, Pre-caching, Offline-First |
-| **Manifest** | Web App Manifest | Standalone display mode, RTL locale, Maskable icons |
-| **Search Engine** | Metadata API | Localized Next.js `Viewport` and `Metadata` OpenGraph/Twitter |
+| **PWA Engine** | Serwist 9.5.x | Service Worker runtime, pre-caching, and offline fallbacks |
+| **Manifest** | Web App Manifest | Standalone display mode, directional metadata, maskable icons |
+| **Search Engine** | Metadata API | Localized Next.js `Viewport` and `Metadata` (OpenGraph & Twitter Cards) |
 | **Crawlers** | `robots.ts` / `sitemap.ts` | Multi-locale dynamic XML Sitemap and crawler directives |
 
 ### DevOps & Containerization
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
-| **Container Engine**| Docker | 3-stage minimal build (`node:22-alpine`) |
-| **Output Mode** | Next.js Standalone | Environment-aware: standalone for Docker, serverless for Vercel |
-| **Process Security**| Non-Root User | Executed under unprivileged `nextjs:nodejs` (UID 1001) |
-| **Continuous Integration** | GitHub Actions | Automated Linting, Type-check, and Docker verification |
+| **Container Engine**| Docker | 3-stage multi-stage build (`node:22-alpine`) |
+| **Output Mode** | Next.js Standalone | Standalone server build for Docker, serverless output for Vercel |
+| **Process Security**| Non-Root User | Runs under non-root system account `nextjs:nodejs` (UID 1001) |
+| **Continuous Integration** | GitHub Actions | Automated linting, type-checking, and container build verification |
 
 ---
 
@@ -123,7 +123,7 @@ mahdi-portfolio/
 ├── dictionaries/
 │   ├── ar.json                    # Arabic dictionary
 │   ├── en.json                    # English dictionary
-│   ├── fa.json                    # Persian dictionary (verbatim original)
+│   ├── fa.json                    # Original base dictionary
 │   ├── ru.json                    # Russian dictionary
 │   └── zh.json                    # Chinese dictionary
 ├── lib/
@@ -157,7 +157,7 @@ Rather than injecting bulky third-party libraries that bloat client bundles and 
 The visual architecture follows a Component-Driven approach:
 * **Structural Containers (`Container.tsx`):** Enforces a responsive boundary (`max-w-7xl mx-auto px-6 lg:px-8`) across all desktop and mobile viewports.
 * **Glassmorphic Substrates (`GlassCard.tsx`):** Employs hardware-accelerated backdrop blur (`backdrop-blur-md`) with low-opacity navy surfaces (`bg-navy-light/10`) and gold border transitions on hover.
-* **Typography & Accents (`SectionHeader.tsx`):** Automatically extracts and formats the `accentWord` with a gold gradient, accompanied by a directional underline accent.
+* **Typography & Accents (`SectionHeader.tsx`):** Automatically formats headers and styles designated accent words alongside a directional underline accent.
 
 ### Bidirectional Layout Isolation
 While the document dynamically switches `dir="rtl"` (for Persian and Arabic) and `dir="ltr"` (for English, Chinese, and Russian), technical code blocks—such as the simulated terminal in `Hero.tsx` and email inputs in `Contact.tsx`—are explicitly wrapped with `dir="ltr"` and `text-left`. This prevents bidirectional punctuation inversion and guarantees correct syntax rendering.
@@ -172,7 +172,7 @@ The application avoids generic REST endpoints for form submissions in favor of N
 
 ## 5. Enterprise PWA & SEO Architecture
 
-* **Pre-caching & Offline Resilience:** Leveraging Serwist, static build assets, font bundles, and core JavaScript chunks are cached inside CacheStorage. When the device experiences network loss, the application serves cached assets seamlessly.
+* **Pre-caching & Offline Resilience:** Leveraging Serwist, static build assets, font bundles, and core JavaScript chunks are cached inside CacheStorage. When the device experiences network loss, cached assets remain accessible.
 * **Multi-Locale Web App Manifest:** Configured with `display: "standalone"`, and dedicated background and theme colors (`#050914` and `#0B132B`) to deliver a native PWA installation experience on Android and iOS.
 * **Typed SEO & Social Graph:** The application exports localized Next.js `Viewport` and `Metadata` objects containing canonical URLs (`metadataBase`), OpenGraph specifications for all 5 languages, Twitter Large Image cards, and Apple Web App meta directives.
 * **Dynamic Sitemap:** `app/sitemap.ts` generates structured XML sitemaps covering all 5 locale paths (`/fa`, `/en`, `/ar`, `/zh`, `/ru`).
@@ -283,21 +283,21 @@ This project is licensed under the [MIT License](LICENSE). Engineered by **Mahdi
 <a name="persian-version"></a>
 ## 🇮🇷 راهنمای فارسی (Persian Architectural Documentation)
 
-پرتال شخصی و پلتفرم مهندسی سازمانی **مهدی محبی‌نیا**؛ پیاده‌سازی شده با فریمورک Next.js 16 (معماری App Router)، کامپوننت‌های سمت سرور React 19، سیستم استایلینگ Tailwind CSS v4، سیستم بین‌المللی‌سازی اختصاصی ۵ زبانه و زیرساخت پیشرفته Progressive Web App (PWA) با قابلیت فعالیت کامل آفلاین (Offline-First). این پروژه با پایبندی سخت‌گیرانه به رویکرد **Zero Technical Debt** (بدهی فنی صفر) و الگوهای Clean Architecture مهندسی شده است.
+پلتفرم شخصی و نمونه‌کارهای مهندسی مهدی محبی‌نیا؛ پیاده‌سازی‌شده با فریمورک Next.js 16 (معماری App Router)، کامپوننت‌های سرور React 19، سیستم استایلینگ Tailwind CSS v4، سیستم بین‌المللی‌سازی ۵ زبانه و قابلیت کارکرد آفلاین (PWA / Offline-First). این پروژه با رعایت اصول Clean Architecture و رویکرد Zero Technical Debt پیاده‌سازی شده است.
 
 ---
 
 ### ۱. فلسفه و اصول معماری
 
-این پلتفرم بر اساس معیارهای دقیق مهندسی نرم‌افزار جهت دستیابی به حداکثر کارایی، ایمنی مطلق تایپ‌ها و استقرارهای قطعی طراحی گردیده است:
+این مخزن بر پایه اصول استاندارد توسعه نرم‌افزار برای دستیابی به پایداری بالا، تایپ‌سیفتی دقیق و استقرارهای پیش‌بینی‌پذیر طراحی شده است:
 
-* **معماری بدون بدهی فنی (Zero-Debt Architecture):** حذف کامل کدهای موقت (`TODO`)، ممنوعیت مطلق تایپ ناامن `any` و استفاده از اعتبارسنجی سراسری با Zod.
-* **توسعه مبتنی بر کامپوننت (Component-Driven):** تفکیک شفاف ماژول‌های اتمیک بازکاربردپذیر (`components/ui/`)، انیمیشن‌های سخت‌افزاری ایزوله (`components/ui/motion/`) و صفحات ارکستراسیون (`components/sections/`).
-* **اجرای سرور-محور (Server-First Execution):** تمامی کامپوننت‌ها به صورت پیش‌فرض در سرور رندر می‌شوند تا حجم جاوااسکریپت ارسالی به کلاینت به صفر نزدیک شود. کامپوننت‌های تعاملی (`"use client"`) منحصراً به بیرونی‌ترین برگه‌های درخت کامپوننت محدود شده‌اند.
-* **اعتبارسنجی دو لایه (Dual-Layer Validation):** فرم تماس در لایه کلاینت با React Hook Form جهت بازخورد آنی کاربر اعتبارسنجی شده و در لایه سرور درون Server Action مجدداً با اسکیمای مشترک Zod ارزیابی می‌گردد.
-* **سیستم بین‌المللی‌سازی بومی ۵ زبانه (Native 5-Language i18n):** پشتیبانی کامل از زبان‌های فارسی (`fa`)، انگلیسی (`en`)، عربی (`ar`)، چینی (`zh`) و روسی (`ru`) بدون استفاده از پکیج‌های حجیم شخص ثالث و از طریق مسیربندی داینامیک `app/[lang]` و لود دینامیک دیکشنری‌های JSON در سرور.
-* **مهندسی چیدمان‌های دوجهته (RTL / LTR):** تنظیم خودکار جهت سند بر اساس زبان جاری (`rtl` برای فارسی و عربی، `ltr` برای انگلیسی، چینی و روسی) همراه با ایزولاسیون کامل بخش‌های کد (ترمینال) در حالت چپ‌به‌راست.
-* **هویت بصری لوکس سازمانی:** ترکیب اختصاصی پالت سرمه‌ای عمیق (`#0B132B`) و طلایی متالیک (`#D4AF37`) همراه با گلس‌مورفیسم بهینه‌سازی‌شده بر پایه شتاب‌دهنده گرافیکی (GPU).
+* **معماری بدون بدهی فنی (Zero-Debt Architecture):** حذف کدهای موقت (`TODO`)، پرهیز کامل از تایپ any (Strict Typing) و اعتبارسنجی سراسری ورودی‌ها با Zod.
+* **توسعه مبتنی بر کامپوننت (Component-Driven):** تفکیک مشخص کامپوننت‌های اتمیک (`components/ui/`)، انیمیشن‌ها (`components/ui/motion/`) و ساختار بخش‌های اصلی صفحه (`components/sections/`).
+* **اجرای سرور-محور (Server-First Execution):** استفاده حداکثری از React Server Components برای به حداقل رساندن حجم باندل کلاینت؛ کامپوننت‌های کلاینتی (`"use client"`) صرفاً به لایه‌های نیازمند تعامل کاربر محدود شده‌اند.
+* **اعتبارسنجی دو لایه (Dual-Layer Validation):** اعتبارسنجی سمت کلاینت با React Hook Form برای تجربه کاربری روان، در کنار اعتبارسنجی مجدد داده‌ها در سرور اکشن با اسکیمای مشترک Zod.
+* **سیستم بین‌المللی‌سازی بومی ۵ زبانه (Native 5-Language i18n):** پشتیبانی از زبان‌های فارسی (`fa`)، انگلیسی (`en`)، عربی (`ar`)، چینی (`zh`) و روسی (`ru`) با استفاده از قابلیت‌های پیش‌فرض App Router و لود پویای فایل‌های JSON بدون تحمیل پکیج‌های حجیم خارجی.
+* **پشتیبانی از چیدمان‌های دوجهته (RTL / LTR):** تنظیم جهت سند بر اساس زبان فعال (`rtl` برای فارسی و عربی، `ltr` برای انگلیسی، چینی و روسی) به همراه ایزولاسیون صریح بخش‌های فنی (شبیه‌ساز ترمینال و فیلد ایمیل) در حالت چپ‌به‌راست.
+* **هویت بصری مدرن سازمانی:** استفاده از پالت سرمه‌ای (`#0B132B`) و طلایی (`#D4AF37`) در کنار رابط کاربری مدرن بر پایه گلس‌مورفیسمِ بهینه‌شده (Hardware-accelerated).
 
 ---
 
@@ -310,7 +310,7 @@ This project is licensed under the [MIT License](LICENSE). Engineered by **Mahdi
 | **کتابخانه UI** | React 19.3.0 | کامپوننت‌های سرور، هوک `useActionState`، ری‌اکت Transitions |
 | **استایلینگ** | Tailwind CSS v4 | توکن‌های هسته در `@theme`، افزونه `@tailwindcss/postcss`، وب‌پک |
 | **تایپوگرافی** | Vazirmatn | فونت بهینه‌شده گوگل با پشتیبانی از گلیف‌های عربی، فارسی و لاتین |
-| **انیمیشن‌ها** | Framer Motion | انیمیشن‌های ورود ترتیبی (Staggered) و آشکارسازی اسکرول (Scroll-Reveal) |
+| **انیمیشن‌ها** | Framer Motion | انیمیشن‌های ورود ترتیبی و آشکارسازی هنگام اسکرول |
 | **سیستم تایپ** | TypeScript 5.x | فعال بودن حالت سخت‌گیرانه (`strict: true`, `noImplicitAny: true`) |
 
 #### اعتبارسنجی، بین‌المللی‌سازی و سرویس‌ها
@@ -320,12 +320,12 @@ This project is licensed under the [MIT License](LICENSE). Engineered by **Mahdi
 | **اعتبارسنجی** | Zod 4.x | اسکیمای اشتراکی اعتبارسنجی ورودی‌ها در کلاینت و سرور |
 | **مدیریت فرم** | React Hook Form | فیلدهای کنترل‌نشده با رزولور `@hookform/resolvers/zod` |
 | **منطق بک‌اند** | Server Actions | اجرای ایمن عملیات سمت سرور با قابلیت `"use server"` |
-| **سرویس ایمیل** | Resend SDK | ارسال امن ایمیل با قالب HTML تاریک، راست‌چین و محافظت‌شده |
+| **سرویس ایمیل** | Resend SDK | ارسال امن ایمیل با قالب HTML تاریک، راست‌چین و واکنش‌گرا |
 
 #### زیرساخت، وب‌اپلیکیشن پیش‌رونده (PWA) و سئو
 | لایه | فناوری | مشخصات فنی و نقش در معماری |
 | :--- | :--- | :--- |
-| **موتور PWA** | Serwist 9.5.x | سرویس‌ورکر پیشرفته، کَشینگ استاتیک و لود تضمینی در حالت آفلاین |
+| **موتور PWA** | Serwist 9.5.x | سرویس‌ورکر پیشرفته، کَشینگ استاتیک و پشتیبانی از دسترسی در حالت آفلاین |
 | **مانیفست وب** | Web App Manifest | پشتیبانی از حالت تمام‌صفحه Standalone، آیکون‌های Maskable و تم اختصاصی |
 | **بهینه‌سازی سئو** | Metadata API | تولید تگ‌های متا، کارت‌های گراف باز و توییتر به صورت تفکیک‌شده برای ۵ زبان |
 | **موتورهای جستجو**| `sitemap.ts` / `robots.ts` | تولید داینامیک فایل XML نقشه سایت برای تمام لوکال‌ها و دستورالعمل ربات‌ها |
@@ -379,7 +379,7 @@ mahdi-portfolio/
 ├── dictionaries/
 │   ├── ar.json                    # دیکشنری محتوای عربی
 │   ├── en.json                    # دیکشنری محتوای انگلیسی
-│   ├── fa.json                    # دیکشنری دقیق و دست‌نخورده متن‌های فارسی
+│   ├── fa.json                    # دیکشنری متون پایه (زبان اصلی پروژه)
 │   ├── ru.json                    # دیکشنری محتوای روسی
 │   └── zh.json                    # دیکشنری محتوای چینی
 ├── lib/
@@ -486,7 +486,7 @@ docker run -d \
 ```
 
 #### ملاحظات امنیتی داکر:
-* استفاده از توزیع فوق‌العاده سبک `node:22-alpine` جهت کاهش چشمگیر سطح آسیب‌پذیری (CVE).
+* استفاده از توزیع فوق‌العاده سبک `node:22-alpine` جهت کاهش سطح آسیب‌پذیری‌های احتمالی (CVE).
 * اجرای کامل پروسه بدون دسترسی ریشه با حساب کاربری سیستمی `nextjs:nodejs` (UID 1001).
 * کاهش حجم نهایی ایمیج از ۸۰۰ مگابایت به کمتر از ۱۵۰ مگابایت با بهره‌گیری از خروجی Standalone.
 
