@@ -12,9 +12,6 @@ const vazirmatn = Vazirmatn({
   variable: "--font-vazirmatn",
 });
 
-const defaultBaseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://mahdimohebinia.com";
-
 export const viewport: Viewport = {
   themeColor: "#0B132B",
   width: "device-width",
@@ -40,7 +37,7 @@ export async function generateMetadata({
   const description = dict.hero.description;
 
   return {
-    metadataBase: new URL(defaultBaseUrl),
+    metadataBase: new URL("https://mahdi-portfolio-cyan.vercel.app"),
     title: {
       default: title,
       template: "%s | Mahdi Mohebi Nia",
@@ -74,7 +71,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `/${validLang}`,
+      url: `https://mahdi-portfolio-cyan.vercel.app/${validLang}`,
       siteName: "Mahdi Mohebi Nia Portfolio",
       locale:
         validLang === "fa"
@@ -87,11 +84,20 @@ export async function generateMetadata({
           ? "ru_RU"
           : "en_US",
       type: "website",
+      images: [
+        {
+          url: "https://mahdi-portfolio-cyan.vercel.app/opengraph-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Mahdi Mohebi Nia - Principal Software Architect",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: ["https://mahdi-portfolio-cyan.vercel.app/opengraph-image.png"],
     },
   };
 }
