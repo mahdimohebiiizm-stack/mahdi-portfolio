@@ -22,6 +22,7 @@ export async function getDictionary(locale: string) {
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
 export type NavbarDict = Dictionary["navbar"];
 export type HeroDict = Dictionary["hero"];
+export type MindsetDict = Dictionary["mindset"];
 export type SkillsDict = Dictionary["skills"];
 export type ProjectsDict = Dictionary["projects"];
 export type ContactDict = Dictionary["contact"];

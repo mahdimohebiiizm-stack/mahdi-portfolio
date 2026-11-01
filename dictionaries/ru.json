@@ -27,6 +27,16 @@
       "statusText": "system initialized"
     }
   },
+  "mindset": {
+    "sectionTitle": "Инженерная философия",
+    "subtitle": "Фундаментальные архитектурные принципы проектирования отказоустойчивых и масштабируемых систем",
+    "zeroDebtTitle": "Zero Technical Debt",
+    "zeroDebtDesc": "Приверженность чистой архитектуре (Clean Architecture), строгой типизации и масштабируемой кодовой базе без дефектов.",
+    "offlineFirstTitle": "Offline-First Architecture",
+    "offlineFirstDesc": "Проектирование надежных мобильных систем, бесперебойно работающих в автономном режиме с гарантированной синхронизацией.",
+    "hardwareCloudTitle": "Hardware-to-Cloud Mastery",
+    "hardwareCloudDesc": "Сквозная экспертиза от низкоуровневых сигналов C++/Arduino до масштабируемого облачного деплоя на Next.js и FastAPI."
+  },
   "skills": {
     "header": {
       "title": "Экспертиза и навыки",

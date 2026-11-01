@@ -27,6 +27,16 @@
       "statusText": "system initialized"
     }
   },
+  "mindset": {
+    "sectionTitle": "فلسفة الهندسة والمنهجية",
+    "subtitle": "المبادئ المعمارية الأساسية لتصميم وتطوير أنظمة مرنة وعالية القابلية للتوسع",
+    "zeroDebtTitle": "Zero Technical Debt",
+    "zeroDebtDesc": "الالتزام الصارم بالبنية النظيفة (Clean Architecture)، وأمان الأنواع البرمجية، وشفرات خالية من العيوب وقابلة للتوسع.",
+    "offlineFirstTitle": "Offline-First Architecture",
+    "offlineFirstDesc": "تصميم أنظمة متقدمة للأجهزة المحمولة تعمل بسلاسة تامة دون اتصال بالإنترنت مع مزامنة بيانات فائقة الاستقرار.",
+    "hardwareCloudTitle": "Hardware-to-Cloud Mastery",
+    "hardwareCloudDesc": "خبرة متكاملة تبدأ من إشارات العتاد منخفضة المستوى بلغة C++ وArduino وصولاً إلى النشر السحابي باستخدام Next.js وFastAPI."
+  },
   "skills": {
     "header": {
       "title": "الخبرات والمهارات",

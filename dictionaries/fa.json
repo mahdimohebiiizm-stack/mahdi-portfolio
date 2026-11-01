@@ -27,6 +27,16 @@
       "statusText": "system initialized"
     }
   },
+  "mindset": {
+    "sectionTitle": "فلسفه و رویکرد مهندسی",
+    "subtitle": "اصول معماری زیربنایی در طراحی و پیاده‌سازی سیستم‌های مقیاس‌پذیر، تاب‌آور و پایدار",
+    "zeroDebtTitle": "Zero Technical Debt",
+    "zeroDebtDesc": "تعهد خدشه‌ناپذیر به معماری تمیز (Clean Architecture)، Type-Safety کامل و کدبیس‌های بدون باگ و با مقیاس‌پذیری بالا.",
+    "offlineFirstTitle": "Offline-First Architecture",
+    "offlineFirstDesc": "طراحی سیستم‌های موبایل و کلاینت تاب‌آور که در شرایط قطع اتصال شبکه بدون اختلال کار کرده و هماهنگ‌سازی پایدار دارند.",
+    "hardwareCloudTitle": "Hardware-to-Cloud Mastery",
+    "hardwareCloudDesc": "تسلط یکپارچه End-to-End از پردازش سیگنال‌های سطح‌پایین سخت‌افزار با C++ و Arduino تا استقرار ابری در کلاس جهانی با Next.js و FastAPI."
+  },
   "skills": {
     "header": {
       "title": "تخصص و مهارت‌ها",

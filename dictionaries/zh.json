@@ -27,6 +27,16 @@
       "statusText": "system initialized"
     }
   },
+  "mindset": {
+    "sectionTitle": "工程哲学与核心理念",
+    "subtitle": "构建高可用、高扩展及具备极致韧性系统的底层架构原则",
+    "zeroDebtTitle": "Zero Technical Debt",
+    "zeroDebtDesc": "坚定恪守整洁架构（Clean Architecture）与严苛类型安全，打造零技术债务、稳健高扩展的工业级代码库。",
+    "offlineFirstTitle": "Offline-First Architecture",
+    "offlineFirstDesc": "构建离线优先的高韧性系统，即便在无网络或恶劣网络环境下亦能无缝运行并可靠同步。",
+    "hardwareCloudTitle": "Hardware-to-Cloud Mastery",
+    "hardwareCloudDesc": "全栈打通从 C++/Arduino 底层硬件信号处理到 Next.js 与 FastAPI 现代云端分布式部署。"
+  },
   "skills": {
     "header": {
       "title": "技术栈与专长",

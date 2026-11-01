@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import Mindset from "@/components/sections/Mindset";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
@@ -20,6 +21,7 @@ export default async function Home({
   return (
     <>
       <Hero dict={dict.hero} />
+      <Mindset dict={dict.mindset} />
       <Skills dict={dict.skills} />
       <Projects dict={dict.projects} />
       <Contact dict={dict.contact} />

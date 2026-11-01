@@ -27,6 +27,16 @@
       "statusText": "system initialized"
     }
   },
+  "mindset": {
+    "sectionTitle": "Engineering Philosophy",
+    "subtitle": "Foundational architectural principles for designing resilient, scalable, and mission-critical systems",
+    "zeroDebtTitle": "Zero Technical Debt",
+    "zeroDebtDesc": "Commitment to clean architecture, strict type-safety, and highly scalable, bug-free codebases.",
+    "offlineFirstTitle": "Offline-First Architecture",
+    "offlineFirstDesc": "Designing resilient mobile systems that function seamlessly without connectivity and sync reliably.",
+    "hardwareCloudTitle": "Hardware-to-Cloud Mastery",
+    "hardwareCloudDesc": "End-to-end expertise from C++/Arduino low-level signals to Next.js and FastAPI cloud deployments."
+  },
   "skills": {
     "header": {
       "title": "Expertise & Skills",
