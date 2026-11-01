@@ -1,0 +1,162 @@
+{
+  "navbar": {
+    "brand": "M.M.NIA",
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "contact": "Связаться"
+  },
+  "hero": {
+    "statusBadge": "Открыт для корпоративных проектов",
+    "titlePrefix": "Архитектор ПО и ",
+    "titleHighlight": "Full-Stack разработчик",
+    "description": "Проектирование и разработка масштабируемых, безопасных и высокопроизводительных систем на базе Clean Architecture с фокусом на Next.js и Flutter.",
+    "projectsBtn": "Смотреть проекты",
+    "resumeBtn": "Скачать резюме",
+    "terminal": {
+      "fileName": "architect-profile.ts",
+      "comment": "// Enterprise Software Architect Profile",
+      "name": "Mahdi Mohebi Nia",
+      "role": "Principal Architect",
+      "mindset": "Clean Architecture & Zero Tech Debt",
+      "statusText": "system initialized"
+    }
+  },
+  "skills": {
+    "header": {
+      "title": "Экспертиза и навыки",
+      "accentWord": "навыки",
+      "subtitle": "Владение современными инструментами разработки с упором на Clean Architecture"
+    },
+    "domains": [
+      {
+        "id": "frontend-uiux",
+        "title": "Frontend & UI/UX",
+        "description": "Создание современных интерфейсов, оптимизация рендеринга и внедрение масштабируемых дизайн-систем.",
+        "skills": [
+          "Next.js",
+          "React",
+          "Tailwind v4",
+          "TypeScript",
+          "Clean Architecture",
+          "UI/UX Design"
+        ]
+      },
+      {
+        "id": "mobile-iot",
+        "title": "Mobile & IoT",
+        "description": "Разработка кроссплатформенных приложений на базе BLoC, поддержка Offline-First и IoT-инженерия.",
+        "skills": [
+          "Flutter",
+          "Dart",
+          "BLoC Pattern",
+          "Offline-First",
+          "C++",
+          "Arduino / ESP32"
+        ]
+      },
+      {
+        "id": "backend-architecture",
+        "title": "Backend & Architecture",
+        "description": "Проектирование высоконадежных сервисов, реляционных БД, корпоративной безопасности и CI/CD пайплайнов.",
+        "skills": [
+          "FastAPI",
+          "PostgreSQL",
+          "Docker",
+          "Monorepo",
+          "CI/CD",
+          "Enterprise Security"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "header": {
+      "title": "Избранные проекты",
+      "accentWord": "проекты",
+      "subtitle": "Корпоративный опыт и архитектура масштабируемых систем"
+    },
+    "items": [
+      {
+        "id": "elevator-eco",
+        "title": "Elevator Ecosystem",
+        "role": "Ведущий Full-Stack разработчик и архитектор",
+        "organization": "A.manage / Shopbot",
+        "description": [
+          "Архитектура корпоративного монорепозитория: портал Next.js/FastAPI и мобильное приложение Flutter.",
+          "Реализация Clean Architecture, паттерна BLoC и очереди Offline-First (FIFO).",
+          "Создание единого источника правды (SSOT) на PostgreSQL с ролевой моделью RBAC."
+        ],
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+      },
+      {
+        "id": "asanro",
+        "title": "Corporate Web Platform",
+        "role": "Full-Stack Web разработчик",
+        "organization": "Asanro Etminan Amir",
+        "description": [
+          "Создание надежного корпоративного веб-портала для компании по установке лифтов.",
+          "Воплощение корпоративной эстетики премиум-класса (Navy/Gold)."
+        ],
+        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "id": "iot-telemetry",
+        "title": "IoT Telemetry System",
+        "role": "Инженер программного и аппаратного обеспечения",
+        "organization": "Дипломный проект бакалавра",
+        "description": [
+          "Разработка IoT-телеметрии на C++ (Arduino Edge) для высокоскоростного съема сигналов.",
+          "Создание Flutter-приложения с интеграцией WebSockets для мониторинга с задержкой менее 50 мс."
+        ],
+        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
+      },
+      {
+        "id": "taskflow",
+        "title": "TaskFlow",
+        "role": "Разработчик мобильных приложений",
+        "organization": "Независимый проект",
+        "description": [
+          "Высокопроизводительное приложение для продуктивности, созданное на Flutter.",
+          "Реактивное управление состоянием и надежная локальная обработка данных."
+        ],
+        "techStack": ["Flutter", "Dart", "State Management"]
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "Контакты и сотрудничество",
+      "accentWord": "сотрудничество",
+      "subtitle": "Свяжитесь со мной для технических консультаций, аудита архитектуры или совместных проектов."
+    },
+    "form": {
+      "nameLabel": "Имя и фамилия",
+      "namePlaceholder": "Например: Mahdi Mohebi Nia",
+      "emailLabel": "Электронная почта",
+      "emailPlaceholder": "name@company.com",
+      "messageLabel": "Текст сообщения",
+      "messagePlaceholder": "Описание требований, масштаб проекта или цель встречи...",
+      "submitBtn": "Отправить сообщение",
+      "submittingBtn": "Отправка сообщения..."
+    },
+    "validation": {
+      "nameMin": "Имя должно содержать не менее 2 символов.",
+      "emailValid": "Пожалуйста, введите корректный адрес электронной почты.",
+      "messageMin": "Сообщение должно содержать не менее 10 символов.",
+      "messageMax": "Сообщение не может превышать 500 символов."
+    },
+    "messages": {
+      "success": "Ваше сообщение успешно отправлено. Я свяжусь с вами в ближайшее время.",
+      "error": "Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже."
+    }
+  },
+  "footer": {
+    "kicker": "LET'S BUILD TOGETHER",
+    "title": "Разработка программных решений мирового уровня",
+    "accentWord": "мирового",
+    "description": "Превращение сложных бизнес-задач в безопасную, масштабируемую и надежную инфраструктуру. Мы создаем устойчивые архитектуры, гарантирующие будущее вашего продукта.",
+    "ctaBtn": "Начать техническое обсуждение",
+    "copyright": "© 2026 Mahdi Mohebi Nia",
+    "tagline": "Engineered with Next.js & Clean Architecture"
+  }
+}

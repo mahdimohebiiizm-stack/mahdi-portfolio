@@ -1,0 +1,162 @@
+{
+  "navbar": {
+    "brand": "M.M.NIA",
+    "skills": "مهارت‌ها",
+    "projects": "پروژه‌ها",
+    "contact": "تماس با من"
+  },
+  "hero": {
+    "statusBadge": "Available for Enterprise Projects",
+    "titlePrefix": "معمار نرم‌افزار و ",
+    "titleHighlight": "توسعه‌دهنده فول‌استک",
+    "description": "طراحی و پیاده‌سازی سیستم‌های مقیاس‌پذیر، امن و پرفورمنس‌محور مبتنی بر Clean Architecture، با تمرکز بر اکوسیستم‌های Next.js و Flutter در کلاس سازمانی.",
+    "projectsBtn": "مشاهده پروژه‌ها",
+    "resumeBtn": "دانلود رزومه",
+    "terminal": {
+      "fileName": "architect-profile.ts",
+      "comment": "// Enterprise Software Architect Profile",
+      "name": "Mahdi Mohebi Nia",
+      "role": "Principal Architect",
+      "mindset": "Clean Architecture & Zero Tech Debt",
+      "statusText": "system initialized"
+    }
+  },
+  "skills": {
+    "header": {
+      "title": "تخصص و مهارت‌ها",
+      "accentWord": "مهارت‌ها",
+      "subtitle": "تسلط بر مدرن‌ترین ابزارهای توسعه نرم‌افزار با رویکرد Clean Architecture"
+    },
+    "domains": [
+      {
+        "id": "frontend-uiux",
+        "title": "Frontend & UI/UX",
+        "description": "طراحی رابط‌های کاربری مدرن، بهینه‌سازی پرفورمنس رندرینگ و پیاده‌سازی دیزاین سیستم‌های مقیاس‌پذیر بر پایه استانداردهای روز.",
+        "skills": [
+          "Next.js",
+          "React",
+          "Tailwind v4",
+          "TypeScript",
+          "Clean Architecture",
+          "UI/UX Design"
+        ]
+      },
+      {
+        "id": "mobile-iot",
+        "title": "Mobile & IoT",
+        "description": "توسعه اپلیکیشن‌های چندسکویی با معماری BLoC، عملکرد آفلاین و مهندسی سیستم‌های سخت‌افزاری و امبدد.",
+        "skills": [
+          "Flutter",
+          "Dart",
+          "BLoC Pattern",
+          "Offline-First",
+          "C++",
+          "Arduino / ESP32"
+        ]
+      },
+      {
+        "id": "backend-architecture",
+        "title": "Backend & Architecture",
+        "description": "طراحی سرویس‌های با پایداری بالا، مهندسی دیتابیس‌های رابطه‌ای، امنیت سازمانی و پایپ‌لاین‌های خودکار استقرار.",
+        "skills": [
+          "FastAPI",
+          "PostgreSQL",
+          "Docker",
+          "Monorepo",
+          "CI/CD",
+          "Enterprise Security"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "header": {
+      "title": "پروژه‌های برجسته",
+      "accentWord": "برجسته",
+      "subtitle": "تجربیات سازمانی و معماری سیستم‌های مقیاس‌پذیر"
+    },
+    "items": [
+      {
+        "id": "elevator-eco",
+        "title": "Elevator Ecosystem",
+        "role": "Lead Full-Stack Developer & System Architect",
+        "organization": "A.manage / Shopbot",
+        "description": [
+          "معماری مونو‌ریپوی سازمانی یکپارچه‌کننده پورتال وب Next.js/FastAPI و اپلیکیشن موبایل Flutter.",
+          "پیاده‌سازی Clean Architecture، الگوی BLoC و صف‌بندی Offline-First با ساختار FIFO.",
+          "مهندسی بک‌اند تک‌مرجع (Single Source of Truth) با PostgreSQL و کنترل دسترسی RBAC."
+        ],
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+      },
+      {
+        "id": "asanro",
+        "title": "Corporate Web Platform",
+        "role": "Full-Stack Web Developer",
+        "organization": "Asanro Etminan Amir",
+        "description": [
+          "توسعه فرانت‌اند وب پایدار و پرفورمنس‌محور برای سازمان مهندسی و نصب آسانسور.",
+          "پیاده‌سازی هویت بصری لوکس سازمانی (سرمه‌ای و طلایی) منطبق بر استانداردهای برند."
+        ],
+        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "id": "iot-telemetry",
+        "title": "IoT Telemetry System",
+        "role": "Hardware & Software Engineer",
+        "organization": "B.Sc. Thesis Project",
+        "description": [
+          "مهندسی سیستم تله‌متری IoT با C++ (نود لبه آردوینو) جهت استخراج پرسرعت سیگنال‌ها.",
+          "توسعه اپلیکیشن چندسکویی Flutter با یکپارچه‌سازی WebSocket برای پایش بلادرنگ با تأخیر زیر ۵۰ میلی‌ثانیه."
+        ],
+        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
+      },
+      {
+        "id": "taskflow",
+        "title": "TaskFlow",
+        "role": "Mobile Application Developer",
+        "organization": "Independent Project",
+        "description": [
+          "طراحی و پیاده‌سازی اپلیکیشن مدیریت تسک با کارایی بالا به صورت کامل با Flutter.",
+          "پیاده‌سازی مدیریت وضعیت واکنش‌گرا و ذخیره‌سازی محلی مقاوم داده‌ها."
+        ],
+        "techStack": ["Flutter", "Dart", "State Management"]
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "ارتباط و همکاری",
+      "accentWord": "همکاری",
+      "subtitle": "برای تبادل نظر فنی، مشاوره معماری یا آغاز پروژه‌های سازمانی، پیام بگذارید."
+    },
+    "form": {
+      "nameLabel": "نام و نام خانوادگی",
+      "namePlaceholder": "مثلاً: مهدی محبی نیا",
+      "emailLabel": "آدرس ایمیل",
+      "emailPlaceholder": "name@company.com",
+      "messageLabel": "متن پیام",
+      "messagePlaceholder": "توضیحات در خصوص نیازمندی‌ها، ابعاد پروژه یا محوریت جلسه...",
+      "submitBtn": "ارسال پیام",
+      "submittingBtn": "در حال ارسال پیام..."
+    },
+    "validation": {
+      "nameMin": "نام باید حداقل شامل ۲ کاراکتر باشد.",
+      "emailValid": "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
+      "messageMin": "پیام باید حداقل شامل ۱۰ کاراکتر باشد.",
+      "messageMax": "پیام نمی‌تواند بیشتر از ۵۰۰ کاراکتر باشد."
+    },
+    "messages": {
+      "success": "پیام شما با موفقیت ارسال شد و در اسرع وقت پاسخ داده خواهد شد.",
+      "error": "خطایی در پردازش و ارسال ایمیل رخ داد. لطفاً بعداً تلاش فرمایید."
+    }
+  },
+  "footer": {
+    "kicker": "LET'S BUILD TOGETHER",
+    "title": "توسعه راهکارهای نرم‌افزاری در کلاس جهانی",
+    "accentWord": "جهانی",
+    "description": "تبدیل چالش‌های پیچیده‌ی کسب‌وکار به زیرساخت‌های امن، مقیاس‌پذیر و بی‌نقص. ما صرفاً کد نمی‌نویسیم؛ معماری‌های پایداری خلق می‌کنیم که آینده‌ی محصول شما را تضمین می‌کنند.",
+    "ctaBtn": "آغاز مذاکره فنی",
+    "copyright": "© 2026 Mahdi Mohebi Nia",
+    "tagline": "Engineered with Next.js & Clean Architecture"
+  }
+}

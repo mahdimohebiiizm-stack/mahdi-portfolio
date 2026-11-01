@@ -1,0 +1,162 @@
+{
+  "navbar": {
+    "brand": "M.M.NIA",
+    "skills": "المهارات",
+    "projects": "المشاريع",
+    "contact": "اتصل بي"
+  },
+  "hero": {
+    "statusBadge": "متاح للمشاريع المؤسسية",
+    "titlePrefix": "مهندس برمجيات و ",
+    "titleHighlight": "مطور متكامل (Full-Stack)",
+    "description": "تصميم وبناء أنظمة برمجية عالية الأداء وقابلة للتوسع وآمنة ترتكز على Clean Architecture، مع التخصص في بيئات Next.js و Flutter للمؤسسات.",
+    "projectsBtn": "عرض المشاريع",
+    "resumeBtn": "تحميل السيرة الذاتية",
+    "terminal": {
+      "fileName": "architect-profile.ts",
+      "comment": "// Enterprise Software Architect Profile",
+      "name": "Mahdi Mohebi Nia",
+      "role": "Principal Architect",
+      "mindset": "Clean Architecture & Zero Tech Debt",
+      "statusText": "system initialized"
+    }
+  },
+  "skills": {
+    "header": {
+      "title": "الخبرات والمهارات",
+      "accentWord": "المهارات",
+      "subtitle": "إتقان أحدث أدوات تطوير البرمجيات وفق معايير Clean Architecture"
+    },
+    "domains": [
+      {
+        "id": "frontend-uiux",
+        "title": "Frontend & UI/UX",
+        "description": "تصميم واجهات مستخدم متطورة، وتحسين أداء الرندرة، وتنفيذ أنظمة تصميم قياسية ومستدامة.",
+        "skills": [
+          "Next.js",
+          "React",
+          "Tailwind v4",
+          "TypeScript",
+          "Clean Architecture",
+          "UI/UX Design"
+        ]
+      },
+      {
+        "id": "mobile-iot",
+        "title": "Mobile & IoT",
+        "description": "تطوير تطبيقات متعددة المنصات بنمط BLoC، ودعم العمل دون اتصال (Offline-First)، وهندسة الأنظمة المدمجة.",
+        "skills": [
+          "Flutter",
+          "Dart",
+          "BLoC Pattern",
+          "Offline-First",
+          "C++",
+          "Arduino / ESP32"
+        ]
+      },
+      {
+        "id": "backend-architecture",
+        "title": "Backend & Architecture",
+        "description": "هندسة خدمات عالية التوافر، وقواعد بيانات علائقية، وأمان مؤسسي، وخطوط نشر مؤتمتة (CI/CD).",
+        "skills": [
+          "FastAPI",
+          "PostgreSQL",
+          "Docker",
+          "Monorepo",
+          "CI/CD",
+          "Enterprise Security"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "header": {
+      "title": "المشاريع البارزة",
+      "accentWord": "البارزة",
+      "subtitle": "تجارب مؤسسية وهندسة معمارية للأنظمة القابلة للتوسع"
+    },
+    "items": [
+      {
+        "id": "elevator-eco",
+        "title": "Elevator Ecosystem",
+        "role": "مطور رئيسي ومهندس أنظمة",
+        "organization": "A.manage / Shopbot",
+        "description": [
+          "هندسة مستودع موحد (Monorepo) يجمع بين بوابة Next.js/FastAPI وتطبيق Flutter.",
+          "تطبيق Clean Architecture ونمط BLoC وتدفق بيانات Offline-First بترتيب FIFO.",
+          "بناء خلفية موحدة موثوقة (Single Source of Truth) مع PostgreSQL ونظام صلاحيات RBAC."
+        ],
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+      },
+      {
+        "id": "asanro",
+        "title": "Corporate Web Platform",
+        "role": "مطور واجهات وتطبيقات الويب",
+        "organization": "Asanro Etminan Amir",
+        "description": [
+          "تطوير منصة ويب متينة لمؤسسة هندسة وتركيب المصاعد.",
+          "ترجمة متطلبات الهوية التجارية إلى تجربة بصرية فاخرة (Navy/Gold)."
+        ],
+        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "id": "iot-telemetry",
+        "title": "IoT Telemetry System",
+        "role": "مهندس برمجيات وعتاد",
+        "organization": "مشروع تخرج البكالوريوس",
+        "description": [
+          "هندسة نظام قياس عن بُعد (IoT) باستخدام C++ (Arduino Edge) لاستخراج الإشارات بسرعة فائقة.",
+          "تطوير تطبيق Flutter مدمج مع WebSockets لمراقبة البيانات بزمن استجابة أقل من 50 مللي ثانية."
+        ],
+        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
+      },
+      {
+        "id": "taskflow",
+        "title": "TaskFlow",
+        "role": "مطور تطبيقات الهواتف الذكية",
+        "organization": "مشروع مستقل",
+        "description": [
+          "تصميم تطبيق إنتاجية عالي الكفاءة مبني بالكامل بواسطة Flutter.",
+          "تطبيق إدارة الحالة التفاعلية والتخزين المحلي الموثوق للبيانات."
+        ],
+        "techStack": ["Flutter", "Dart", "State Management"]
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "التواصل والتعاون",
+      "accentWord": "والتعاون",
+      "subtitle": "تواصل معي للاستشارات التقنية أو مراجعات البنية التحتية أو بدء الشراكات المؤسسية."
+    },
+    "form": {
+      "nameLabel": "الاسم الكامل",
+      "namePlaceholder": "مثال: مهدي محبي نيا",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "name@company.com",
+      "messageLabel": "الرسالة",
+      "messagePlaceholder": "تفاصيل حول نطاق المشروع أو المتطلبات الفنية أو جدول الاجتماع...",
+      "submitBtn": "إرسال الرسالة",
+      "submittingBtn": "جاري الإرسال..."
+    },
+    "validation": {
+      "nameMin": "يجب أن يتكون الاسم من حرفين على الأقل.",
+      "emailValid": "يرجى إدخال عنوان بريد إلكتروني صحيح.",
+      "messageMin": "يجب أن تتكون الرسالة من 10 أحرف على الأقل.",
+      "messageMax": "لا يمكن أن تتجاوز الرسالة 500 حرف."
+    },
+    "messages": {
+      "success": "تم إرسال رسالتك بنجاح، وسيتم الرد عليك في أقرب وقت ممكن.",
+      "error": "حدث خطأ أثناء معالجة الطلب. يرجى المحاولة مرة أخرى لاحقاً."
+    }
+  },
+  "footer": {
+    "kicker": "LET'S BUILD TOGETHER",
+    "title": "تطوير حلول برمجية بمستوى عالمي",
+    "accentWord": "عالمي",
+    "description": "تحويل تحديات الأعمال المعقدة إلى بنى تحتية آمنة وقابلة للتوسع وبلا أخطاء. نحن لا نكتفي بكتابة الكود؛ بل نبني معماريات برمجية مستدامة تضمن مستقبل منتجك.",
+    "ctaBtn": "بدء النقاش التقني",
+    "copyright": "© 2026 Mahdi Mohebi Nia",
+    "tagline": "Engineered with Next.js & Clean Architecture"
+  }
+}

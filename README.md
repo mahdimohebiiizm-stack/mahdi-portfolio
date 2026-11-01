@@ -1,25 +1,36 @@
+<div align="center">
+
+# 🌐 <a href="https://mahdi-portfolio-cyan.vercel.app/">VIEW LIVE ENTERPRISE PORTFOLIO</a>
+
+[![Production Deployment](https://img.shields.io/badge/Production%20Deployment-Vercel%20Live-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://mahdi-portfolio-cyan.vercel.app/)
+[![Next.js](https://img.shields.io/badge/Next.js-16.4.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.3.0-20232A?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+[![i18n](https://img.shields.io/badge/i18n-5%20Locales%20(FA%20%7C%20EN%20%7C%20AR%20%7C%20ZH%20%7C%20RU)-D4AF37?style=for-the-badge)](https://mahdi-portfolio-cyan.vercel.app/)
+[![Docker](https://img.shields.io/badge/Docker-Multi--Stage_Alpine-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
+[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions)](https://github.com/)
+
+</div>
+
+---
+
 # Mahdi Mohebi Nia | Enterprise Portfolio & Platform
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.4.3-black?style=flat-square&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.3.0-20232A?style=flat-square&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
-[![Docker](https://img.shields.io/badge/Docker-Multi--Stage_Alpine-2496ED?style=flat-square&logo=docker)](https://www.docker.com/)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=flat-square&logo=github-actions)](https://github.com/)
-
-An enterprise-grade, high-performance personal platform and technical portfolio engineered with Next.js 16 App Router, React 19 Server Components, Tailwind CSS v4, and an Offline-First Progressive Web App (PWA) architecture. The platform adheres strictly to the **Zero Technical Debt** paradigm and Clean Architecture principles.
+An enterprise-grade, high-performance personal platform and technical portfolio engineered with Next.js 16 App Router, React 19 Server Components, Tailwind CSS v4, dynamic multi-language architecture (5 locales), and an Offline-First Progressive Web App (PWA) infrastructure. The platform strictly adheres to the **Zero Technical Debt** paradigm and Clean Architecture principles.
 
 ---
 
 ## 1. Architectural Philosophy
 
-The repository was constructed with rigorous engineering standards to guarantee performance, strict type safety, zero runtime errors, and deterministic deployments:
+The repository was constructed under rigorous engineering specifications to guarantee performance, strict type safety, zero runtime errors, and deterministic deployments:
 
 * **Zero-Debt Architecture:** No placeholder code (`TODO`), complete elimination of the `any` type, and strict end-to-end schema validation.
-* **Component-Driven Development:** Clear isolation between reusable atomic primitives (`components/ui/`) and orchestrator views (`components/sections/`).
+* **Component-Driven Development:** Clear isolation between reusable atomic primitives (`components/ui/`), motion wrappers (`components/ui/motion/`), and orchestrator sectional views (`components/sections/`).
 * **Server-First Execution:** Server Components are utilized by default to eliminate client-side JavaScript overhead. Client Components (`"use client"`) are strictly isolated to interactive leaves.
-* **Dual-Layer Validation:** Form inputs are validated on the client side for instantaneous feedback and re-validated on the server side inside Server Actions using a shared Zod schema.
-* **Native RTL Typography:** Engineered from the ground up for Right-to-Left (Persian) layout flow utilizing Google Fonts (`Vazirmatn`) and Tailwind CSS logical properties.
+* **Dual-Layer Validation:** Form inputs are validated synchronously on the client side for instantaneous feedback and re-validated on the server side inside Server Actions using a shared Zod schema.
+* **Native Zero-Dependency 5-Language i18n:** Fully localized routing supporting Persian (`fa`), English (`en`), Arabic (`ar`), Chinese (`zh`), and Russian (`ru`) with dynamic language negotiation, locale cookies, and zero bundle-bloating third-party libraries.
+* **Bidirectional Layout Engineering:** Native RTL flow for Persian and Arabic via Google Fonts (`Vazirmatn`) and Tailwind CSS logical properties, with strict LTR isolation for simulated code environments.
 * **Corporate Luxury Visual Identity:** Custom Navy (`#0B132B`) and Gold (`#D4AF37`) palette with hardware-accelerated Glassmorphism.
 
 ---
@@ -29,32 +40,35 @@ The repository was constructed with rigorous engineering standards to guarantee 
 ### Core Framework & UI
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
-| **Framework** | Next.js 16.4.3 | App Router, Cache Components, Partial Prerendering (PPR) |
+| **Framework** | Next.js 16.4.3 | App Router, Dynamic Routes `[lang]`, Cache Components, PPR |
 | **Library** | React 19.3.0 | Server Components, `useActionState`, Transitions |
-| **Styling** | Tailwind CSS v4 | Engine-level `@theme` tokens, `@tailwindcss/turbopack` |
-| **Typography** | Vazirmatn | `next/font/google`, Subsets: Arabic and Latin |
+| **Styling** | Tailwind CSS v4 | Engine-level `@theme` tokens, `@tailwindcss/postcss`, Webpack |
+| **Typography** | Vazirmatn | `next/font/google`, Subsets: Arabic, Latin with system fallbacks |
+| **Animations** | Framer Motion | High-performance staggered entrances & scroll-reveal triggers |
 | **Language** | TypeScript 5.x | Strict mode enabled (`strict: true`, `noImplicitAny: true`) |
 
-### State, Validation & Server Actions
+### Localization, State, Validation & Server Actions
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
+| **i18n Engine** | Native Dynamic Routing | JSON Dictionaries, locale negotiation, `generateStaticParams` |
 | **Validation** | Zod 4.x | Shared input schema across client and server runtimes |
 | **Form Management**| React Hook Form | Uncontrolled form inputs with `@hookform/resolvers/zod` |
 | **Server Logic** | Server Actions | Secure backend execution via Next.js `"use server"` |
+| **Email Service** | Resend API SDK | Enterprise email forwarding with custom dark-themed RTL HTML |
 
 ### Infrastructure, PWA & SEO
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
 | **PWA Engine** | Serwist 9.5.x | Modern Service Worker runtime, Pre-caching, Offline-First |
 | **Manifest** | Web App Manifest | Standalone display mode, RTL locale, Maskable icons |
-| **Search Engine** | Metadata API | Strict Next.js `Viewport` and `Metadata` OpenGraph/Twitter |
-| **Crawlers** | `robots.ts` / `sitemap.ts` | Dynamic XML Sitemap and Robots file generation |
+| **Search Engine** | Metadata API | Localized Next.js `Viewport` and `Metadata` OpenGraph/Twitter |
+| **Crawlers** | `robots.ts` / `sitemap.ts` | Multi-locale dynamic XML Sitemap and crawler directives |
 
 ### DevOps & Containerization
 | Layer | Technology | Specification / Role |
 | :--- | :--- | :--- |
 | **Container Engine**| Docker | 3-stage minimal build (`node:22-alpine`) |
-| **Output Mode** | Next.js Standalone | Automatic dependency tracing with lightweight `server.js` |
+| **Output Mode** | Next.js Standalone | Environment-aware: standalone for Docker, serverless for Vercel |
 | **Process Security**| Non-Root User | Executed under unprivileged `nextjs:nodejs` (UID 1001) |
 | **Continuous Integration** | GitHub Actions | Automated Linting, Type-check, and Docker verification |
 
@@ -68,38 +82,53 @@ mahdi-portfolio/
 │   └── workflows/
 │       └── ci.yml                 # Automated CI quality and Docker build pipeline
 ├── app/
+│   ├── [lang]/
+│   │   ├── layout.tsx             # Localized root layout with dynamic lang & dir
+│   │   └── page.tsx               # Server-First page assembling localized sections
 │   ├── actions/
-│   │   └── contact.ts             # Server Action with server-side Zod validation
+│   │   └── contact.ts             # Server Action with Resend SDK & Zod validation
 │   ├── globals.css                # Tailwind v4 @theme design tokens and baseline rules
-│   ├── layout.tsx                 # Root layout with Vazirmatn font and Enterprise Metadata
-│   ├── page.tsx                   # Main orchestrator assembling sectional views
 │   ├── robots.ts                  # Dynamic crawler directives
-│   ├── sitemap.ts                 # Dynamic XML sitemap generator
+│   ├── sitemap.ts                 # Dynamic XML sitemap generator (5 locales)
 │   └── sw.ts                      # Serwist Service Worker source definition
 ├── components/
 │   ├── layout/
-│   │   ├── Navbar.tsx             # Client navigation header with backdrop blur
+│   │   ├── Navbar.tsx             # Navigation header with LanguageSwitcher
 │   │   └── Footer.tsx             # Semantic server-rendered footer
 │   ├── sections/
-│   │   ├── Contact.tsx            # Interactive form utilizing useActionState & RHF
-│   │   ├── Hero.tsx               # Primary introduction with LTR terminal simulation
-│   │   ├── Projects.tsx           # Production showcase mapping ATS resume data
+│   │   ├── Contact.tsx            # Form utilizing useActionState & RHF
+│   │   ├── Hero.tsx               # Introduction with LTR terminal simulation
+│   │   ├── Projects.tsx           # Showcase mapping verified engineering experience
 │   │   └── Skills.tsx             # Domain-categorized expertise with SVG badges
 │   └── ui/
+│       ├── motion/
+│       │   ├── FadeInScale.tsx    # Hardware-accelerated scale entrance
+│       │   ├── FadeInUp.tsx       # Smooth scroll-reveal motion wrapper
+│       │   └── StaggerContainer.tsx# Orchestrated child animation container
 │       ├── Button.tsx             # Scalable button primitive (Primary / Outline)
 │       ├── Container.tsx          # Max-width layout boundary container
 │       ├── GlassCard.tsx          # High-performance glassmorphism card
+│       ├── LanguageSwitcher.tsx   # Sleek glassmorphic 5-language dropdown
 │       └── SectionHeader.tsx      # Typographic header with gold accent underline
+├── dictionaries/
+│   ├── ar.json                    # Arabic dictionary
+│   ├── en.json                    # English dictionary
+│   ├── fa.json                    # Persian dictionary (verbatim original)
+│   ├── ru.json                    # Russian dictionary
+│   └── zh.json                    # Chinese dictionary
 ├── lib/
+│   ├── dictionary.ts              # Type-safe dynamic dictionary loader
+│   ├── i18n.ts                    # Locales, RTL metadata, and language configurations
 │   └── validations/
 │       └── contact.ts             # Inferred Zod schema and TypeScript contract
 ├── public/
-│   ├── manifest.json              # Web App Manifest configured for RTL standalone mode
+│   ├── manifest.json              # Web App Manifest configured for standalone mode
 │   └── sw.js                      # Compiled production Service Worker
 ├── .dockerignore                  # Build context exclusion rules
 ├── Dockerfile                     # Multi-stage production container specification
 ├── eslint.config.mjs              # Flat ESLint configuration with selective ignores
-├── next.config.ts                 # Next.js configuration with Serwist & Standalone mode
+├── middleware.ts                  # High-performance locale routing and negotiation
+├── next.config.ts                 # Next.js configuration with Serwist & Webpack
 ├── package.json                   # Project dependencies and script declarations
 └── tsconfig.json                  # Compiler options enforcing strict type evaluation
 ```
@@ -108,6 +137,12 @@ mahdi-portfolio/
 
 ## 4. Architectural Patterns
 
+### Native Zero-Dependency i18n System
+Rather than injecting bulky third-party libraries that bloat client bundles and introduce hydration overhead, the platform utilizes Next.js dynamic routing (`app/[lang]`):
+1. **Routing & Negotiation (`middleware.ts`):** Intercepts requests, inspects `NEXT_LOCALE` cookie and `Accept-Language` headers, and routes cleanly to `/${locale}` while bypassing static assets and PWA files.
+2. **Server-Side Dictionary Loading (`lib/dictionary.ts`):** Asynchronously imports only the JSON dictionary required for the active locale on the server, streaming static HTML with zero client JS dictionary overhead.
+3. **Glassmorphic Language Switcher (`LanguageSwitcher.tsx`):** A lightweight client dropdown that preserves user selections via cookies, updates the route segment, and closes smoothly on outside click.
+
 ### Atomic UI System
 The visual architecture follows a Component-Driven approach:
 * **Structural Containers (`Container.tsx`):** Enforces a responsive boundary (`max-w-7xl mx-auto px-6 lg:px-8`) across all desktop and mobile viewports.
@@ -115,21 +150,22 @@ The visual architecture follows a Component-Driven approach:
 * **Typography & Accents (`SectionHeader.tsx`):** Automatically extracts and formats the `accentWord` with a gold gradient, accompanied by a directional underline accent.
 
 ### Bidirectional Layout Isolation
-While the global document is strictly configured for Right-to-Left Persian (`dir="rtl"`, `lang="fa"`), technical blocks—such as the simulated code terminal in `Hero.tsx` and the email input in `Contact.tsx`—are explicitly wrapped with `dir="ltr"` and `text-left`. This prevents bidirectional punctuation inversion and guarantees correct syntax rendering for English code.
+While the document dynamically switches `dir="rtl"` (for Persian and Arabic) and `dir="ltr"` (for English, Chinese, and Russian), technical code blocks—such as the simulated terminal in `Hero.tsx` and email inputs in `Contact.tsx`—are explicitly wrapped with `dir="ltr"` and `text-left`. This prevents bidirectional punctuation inversion and guarantees correct syntax rendering.
 
 ### Secure Server Actions & Dual-Layer Validation
 The application avoids generic REST endpoints for form submissions in favor of Next.js Server Actions:
-1. **Client Tier:** `Contact.tsx` registers inputs via `react-hook-form` and validates synchronously using `zodResolver(contactSchema)`. No network traffic occurs if validation fails.
+1. **Client Tier:** `Contact.tsx` registers inputs via `react-hook-form` and validates synchronously using `zodResolver(localizedSchema)`. No network traffic occurs if validation fails.
 2. **Server Tier:** `submitContactForm` in `app/actions/contact.ts` intercepts the raw `FormData` and executes `contactSchema.safeParse`. Client assertions are treated as untrusted; if data tampering occurs, structured field errors are returned.
-3. **State Integration:** React 19's `useActionState` manages pending states (`isPending`) without manual boolean state tracking, enabling non-blocking UI updates.
+3. **Resend Email Integration:** Validated submissions are formatted into an RTL HTML email template and forwarded through the Resend API, protecting environment secrets and avoiding leaking server stacks.
 
 ---
 
 ## 5. Enterprise PWA & SEO Architecture
 
 * **Pre-caching & Offline Resilience:** Leveraging Serwist, static build assets, font bundles, and core JavaScript chunks are cached inside CacheStorage. When the device experiences network loss, the application serves cached assets seamlessly.
-* **RTL Web App Manifest:** Configured with `dir: "rtl"`, `lang: "fa"`, `display: "standalone"`, and dedicated background and theme colors (`#050914` and `#0B132B`) to deliver a native PWA installation experience on Android and iOS.
-* **Typed SEO & Social Graph:** The application exports Next.js `Viewport` and `Metadata` objects containing canonical URLs (`metadataBase`), OpenGraph specifications (`fa_IR`), Twitter Large Image cards, and Apple Web App meta directives without using raw `<meta>` tags.
+* **Multi-Locale Web App Manifest:** Configured with `display: "standalone"`, and dedicated background and theme colors (`#050914` and `#0B132B`) to deliver a native PWA installation experience on Android and iOS.
+* **Typed SEO & Social Graph:** The application exports localized Next.js `Viewport` and `Metadata` objects containing canonical URLs (`metadataBase`), OpenGraph specifications for all 5 languages, Twitter Large Image cards, and Apple Web App meta directives.
+* **Dynamic Sitemap:** `app/sitemap.ts` generates structured XML sitemaps covering all 5 locale paths (`/fa`, `/en`, `/ar`, `/zh`, `/ru`).
 
 ---
 
@@ -150,13 +186,16 @@ cd mahdi-portfolio
 # 2. Install dependencies deterministically
 npm ci
 
-# 3. Start the development server (with Turbopack)
+# 3. Configure environment variables (.env.local)
+cp .env.example .env.local
+
+# 4. Start the development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Quality Assurance & Linting
+### Quality Assurance & Verification
 Run the strict verification suite locally before committing:
 
 ```bash
@@ -177,7 +216,7 @@ npm run build
 The project features a hardened, 3-stage `Dockerfile` designed for production deployments.
 
 ### Why `output: "standalone"`?
-By setting `output: "standalone"` in `next.config.ts`, Next.js analyzes the AST of the codebase and traces only the files, packages, and `node_modules` strictly required to execute the server. This reduces the deployment footprint from over 800MB to under 150MB, significantly improving container startup time and reducing the attack surface.
+By setting `output: "standalone"` dynamically for non-Vercel environments, Next.js analyzes the AST of the codebase and traces only the files, packages, and `node_modules` strictly required to execute the server. This reduces the deployment footprint from over 800MB to under 150MB, significantly improving container startup time and reducing the attack surface.
 
 ### Container Build & Run
 
@@ -208,25 +247,249 @@ Automated checks are executed via GitHub Actions (`.github/workflows/ci.yml`) on
 
 ```mermaid
 flowchart LR
-    A[Push / PR to main] --> B[Job: Quality Assurance]
-    subgraph QA [Code Quality & Type Safety]
-        B --> B1[actions/setup-node 22]
-        B1 --> B2[npm ci]
-        B2 --> B3[npm run lint]
-        B3 --> B4[npx tsc --noEmit]
+    A["Push / PR to main"] --> B["Job: Quality Assurance"]
+    subgraph QA ["Code Quality & Type Safety"]
+        B --> B1["actions/setup-node 22"]
+        B1 --> B2["npm ci"]
+        B2 --> B3["npm run lint"]
+        B3 --> B4["npx tsc --noEmit"]
     end
-    B4 --> C[Job: Docker Verification]
-    subgraph Docker [Container Build Verification]
-        C --> C1[docker/setup-buildx-action]
-        C1 --> C2[docker/build-push-action]
-        C2 --> C3[Verification: push=false, load=true]
+    B4 --> C["Job: Docker Verification"]
+    subgraph Docker ["Container Build Verification"]
+        C --> C1["docker/setup-buildx-action"]
+        C1 --> C2["docker/build-push-action"]
+        C2 --> C3["Verification: push=false, load=true"]
     end
 ```
-
-The pipeline acts as an automated quality gate; no code can be merged into production unless both static type checks and container compilation succeed with zero warnings.
 
 ---
 
 ## 9. License
 
 This project is licensed under the [MIT License](LICENSE). Engineered by **Mahdi Mohebi Nia**.
+
+---
+
+## 🇮🇷 راهنمای فارسی (Persian Architectural Documentation)
+
+پرتال شخصی و پلتفرم مهندسی سازمانی **مهدی محبی‌نیا**؛ پیاده‌سازی شده با فریمورک Next.js 16 (معماری App Router)، کامپوننت‌های سمت سرور React 19، سیستم استایلینگ Tailwind CSS v4، سیستم بین‌المللی‌سازی اختصاصی ۵ زبانه و زیرساخت پیشرفته Progressive Web App (PWA) با قابلیت فعالیت کامل آفلاین (Offline-First). این پروژه با پایبندی سخت‌گیرانه به رویکرد **Zero Technical Debt** (بدهی فنی صفر) و الگوهای Clean Architecture مهندسی شده است.
+
+---
+
+### ۱. فلسفه و اصول معماری
+
+این پلتفرم بر اساس معیارهای دقیق مهندسی نرم‌افزار جهت دستیابی به حداکثر کارایی، ایمنی مطلق تایپ‌ها و استقرارهای قطعی طراحی گردیده است:
+
+* **معماری بدون بدهی فنی (Zero-Debt Architecture):** حذف کامل کدهای موقت (`TODO`)، ممنوعیت مطلق تایپ ناامن `any` و استفاده از اعتبارسنجی سراسری با Zod.
+* **توسعه مبتنی بر کامپوننت (Component-Driven):** تفکیک شفاف ماژول‌های اتمیک بازکاربردپذیر (`components/ui/`)، انیمیشن‌های سخت‌افزاری ایزوله (`components/ui/motion/`) و صفحات ارکستراسیون (`components/sections/`).
+* **اجرای سرور-محور (Server-First Execution):** تمامی کامپوننت‌ها به صورت پیش‌فرض در سرور رندر می‌شوند تا حجم جاوااسکریپت ارسالی به کلاینت به صفر نزدیک شود. کامپوننت‌های تعاملی (`"use client"`) منحصراً به بیرونی‌ترین برگه‌های درخت کامپوننت محدود شده‌اند.
+* **اعتبارسنجی دو لایه (Dual-Layer Validation):** فرم تماس در لایه کلاینت با React Hook Form جهت بازخورد آنی کاربر اعتبارسنجی شده و در لایه سرور درون Server Action مجدداً با اسکیمای مشترک Zod ارزیابی می‌گردد.
+* **سیستم بین‌المللی‌سازی بومی ۵ زبانه (Native 5-Language i18n):** پشتیبانی کامل از زبان‌های فارسی (`fa`)، انگلیسی (`en`)، عربی (`ar`)، چینی (`zh`) و روسی (`ru`) بدون استفاده از پکیج‌های حجیم شخص ثالث و از طریق مسیربندی داینامیک `app/[lang]` و لود دینامیک دیکشنری‌های JSON در سرور.
+* **مهندسی چیدمان‌های دوجهته (RTL / LTR):** تنظیم خودکار جهت سند بر اساس زبان جاری (`rtl` برای فارسی و عربی، `ltr` برای انگلیسی، چینی و روسی) همراه با ایزولاسیون کامل بخش‌های کد (ترمینال) در حالت چپ‌به‌راست.
+* **هویت بصری لوکس سازمانی:** ترکیب اختصاصی پالت سرمه‌ای عمیق (`#0B132B`) و طلایی متالیک (`#D4AF37`) همراه با گلس‌مورفیسم بهینه‌سازی‌شده بر پایه شتاب‌دهنده گرافیکی (GPU).
+
+---
+
+### ۲. مشخصات و پشته فناوری (Tech Stack)
+
+#### فریمورک، کتابخانه‌ها و رابط کاربری
+| لایه | فناوری | مشخصات فنی و نقش در معماری |
+| :--- | :--- | :--- |
+| **فریمورک اصلی** | Next.js 16.4.3 | معماری App Router، مسیرهای داینامیک `[lang]`، کامپوننت‌های کَش، PPR |
+| **کتابخانه UI** | React 19.3.0 | کامپوننت‌های سرور، هوک `useActionState`، ری‌اکت Transitions |
+| **استایلینگ** | Tailwind CSS v4 | توکن‌های هسته در `@theme`، افزونه `@tailwindcss/postcss`، وب‌پک |
+| **تایپوگرافی** | Vazirmatn | فونت بهینه‌شده گوگل با پشتیبانی از گلیف‌های عربی، فارسی و لاتین |
+| **انیمیشن‌ها** | Framer Motion | انیمیشن‌های ورود ترتیبی (Staggered) و آشکارسازی اسکرول (Scroll-Reveal) |
+| **سیستم تایپ** | TypeScript 5.x | فعال بودن حالت سخت‌گیرانه (`strict: true`, `noImplicitAny: true`) |
+
+#### اعتبارسنجی، بین‌المللی‌سازی و سرویس‌ها
+| لایه | فناوری | مشخصات فنی و نقش در معماری |
+| :--- | :--- | :--- |
+| **موتور i18n** | روتینگ داینامیک بومی | دیکشنری‌های JSON، مذاکره هدر `Accept-Language` و `generateStaticParams` |
+| **اعتبارسنجی** | Zod 4.x | اسکیمای اشتراکی اعتبارسنجی ورودی‌ها در کلاینت و سرور |
+| **مدیریت فرم** | React Hook Form | فیلدهای کنترل‌نشده با رزولور `@hookform/resolvers/zod` |
+| **منطق بک‌اند** | Server Actions | اجرای ایمن عملیات سمت سرور با قابلیت `"use server"` |
+| **سرویس ایمیل** | Resend SDK | ارسال امن ایمیل با قالب HTML تاریک، راست‌چین و محافظت‌شده |
+
+#### زیرساخت، وب‌اپلیکیشن پیش‌رونده (PWA) و سئو
+| لایه | فناوری | مشخصات فنی و نقش در معماری |
+| :--- | :--- | :--- |
+| **موتور PWA** | Serwist 9.5.x | سرویس‌ورکر پیشرفته، کَشینگ استاتیک و لود تضمینی در حالت آفلاین |
+| **مانیفست وب** | Web App Manifest | پشتیبانی از حالت تمام‌صفحه Standalone، آیکون‌های Maskable و تم اختصاصی |
+| **بهینه‌سازی سئو** | Metadata API | تولید تگ‌های متا، کارت‌های گراف باز و توییتر به صورت تفکیک‌شده برای ۵ زبان |
+| **موتورهای جستجو**| `sitemap.ts` / `robots.ts` | تولید داینامیک فایل XML نقشه سایت برای تمام لوکال‌ها و دستورالعمل ربات‌ها |
+
+#### دوآپس و کانتینرسازی
+| لایه | فناوری | مشخصات فنی و نقش در معماری |
+| :--- | :--- | :--- |
+| **کانتینر** | Docker | ساخت ۳ مرحله‌ای مینیمال و ایزوله بر پایه `node:22-alpine` |
+| **حالت خروجی** | Next.js Standalone | خودکار: Standalone برای داکر و Native Serverless برای استقرار Vercel |
+| **امنیت اجرا** | Non-Root User | اجرای کانتینر با دسترسی کاربر غیر ریشه `nextjs:nodejs` (UID 1001) |
+| **یکپارچه‌سازی مداوم**| GitHub Actions | اعتبارسنجی خودکار Lint، Type-check و بیلد آزمایشی ایمیج داکر |
+
+---
+
+### ۳. ساختار درختی مخزن
+
+```text
+mahdi-portfolio/
+├── .github/
+│   └── workflows/
+│       └── ci.yml                 # پایپ‌لاین کنترل کیفیت و ساخت کانتینر در گیت‌هاب
+├── app/
+│   ├── [lang]/
+│   │   ├── layout.tsx             # چیدمان ریشه با تنظیم داینامیک زبان و جهت سند
+│   │   └── page.tsx               # صفحه اصلی سرور-محور مونتاژکننده بخش‌های ترجمه‌شده
+│   ├── actions/
+│   │   └── contact.ts             # سرور اکشن ارسال ایمیل با Resend و اعتبارسنجی Zod
+│   ├── globals.css                # توکن‌های دیزاین سیستم Tailwind v4 و تنظیمات پایه
+│   ├── robots.ts                  # تولید داینامیک دستورالعمل خزنده‌ها (Robots.txt)
+│   ├── sitemap.ts                 # تولید سایت‌مپ داینامیک XML برای ۵ زبان
+│   └── sw.ts                      # سورس کلاینت سرویس‌ورکر Serwist
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx             # نوبار شیشه‌ای همراه با سلکتور زبان
+│   │   └── Footer.tsx             # فوتر سمانتیک سرور رندر با تم Navy & Gold
+│   ├── sections/
+│   │   ├── Contact.tsx            # فرم تعاملی با هوک useActionState و RHF
+│   │   ├── Hero.tsx               # بخش معرفی با شبیه‌ساز ترمینال LTR
+│   │   ├── Projects.tsx           # ویترین پروژه‌ها بر اساس سوابق واقعی مهندسی
+│   │   └── Skills.tsx             # دسته‌بندی تخصص‌ها در ۳ حوزه با آیکون‌های برداری
+│   └── ui/
+│       ├── motion/
+│       │   ├── FadeInScale.tsx    # انیمیشن ورود مقیاسی شتاب‌یافته
+│       │   ├── FadeInUp.tsx       # انیمیشن ورود نرم همراه با اسکرول
+│       │   └── StaggerContainer.tsx# کانتینر هماهنگ‌کننده انیمیشن‌های چندگانه
+│       ├── Button.tsx             # دکمه پایه اتمیک (Primary و Outline)
+│       ├── Container.tsx          # محدودکننده عرض و واکنش‌گرایی محتوا
+│       ├── GlassCard.tsx          # کارت شیشه‌ای با افکت بلور سخت‌افزاری
+│       ├── LanguageSwitcher.tsx   # منوی دراپ‌داون مدرن انتخاب ۵ زبان
+│       └── SectionHeader.tsx      # سرتیتر بخش‌ها با کلمه تأکیدی طلایی
+├── dictionaries/
+│   ├── ar.json                    # دیکشنری محتوای عربی
+│   ├── en.json                    # دیکشنری محتوای انگلیسی
+│   ├── fa.json                    # دیکشنری دقیق و دست‌نخورده متن‌های فارسی
+│   ├── ru.json                    # دیکشنری محتوای روسی
+│   └── zh.json                    # دیکشنری محتوای چینی
+├── lib/
+│   ├── dictionary.ts              # بارگذاری داینامیک و تایپ‌سیف دیکشنری‌ها در سرور
+│   ├── i18n.ts                    # متادیتای زبان‌ها، پرچم‌ها و پیکربندی جهت‌ها
+│   └── validations/
+│       └── contact.ts             # اسکیمای اعتبارسنجی فرم با Zod
+├── public/
+│   ├── manifest.json              # مانیفست وب‌اپلیکیشن برای نصب PWA
+│   └── sw.js                      # فایل کامپایل‌شده سرویس‌ورکر پروداکشن
+├── .dockerignore                  # قوانین نادیده‌گیری فایل‌ها در کانتینر
+├── Dockerfile                     # فایل مشخصات چندمرحله‌ای ساخت کانتینر
+├── eslint.config.mjs              # کانفیگ مدرن فلت ESLint با نادیده‌گیری هوشمند
+├── middleware.ts                  # میدلور هوشمند هدایت و مذاکره زبان کاربران
+├── next.config.ts                 # کانفیگ Next.js، سازگار با Serwist و Webpack
+├── package.json                   # پکیج‌ها و اسکریپت‌های اجرایی پروژه
+└── tsconfig.json                  # تنظیمات سخت‌گیرانه کامپایلر تایپ‌اسکریپت
+```
+
+---
+
+### ۴. الگوهای پیاده‌سازی و معماری
+
+#### معماری بین‌المللی‌سازی بومی و سبک (Zero-Dependency i18n)
+به جای تزریق کتابخانه‌های سنگین خارجی که باندل کلاینت را متورم کرده و مشکل هیدریشن ایجاد می‌کنند، از قابلیت‌های بومی App Router استفاده شده است:
+1. **مسیریابی و مذاکره زبان (`middleware.ts`):** درخواست‌های ورودی بررسی می‌شوند؛ ابتدا کوکی `NEXT_LOCALE` و سپس هدر مرورگر `Accept-Language` تحلیل شده و کاربر بدون لود فایل‌های استاتیک به مسیر `/${locale}` هدایت می‌شود.
+2. **لود دیکشنری در سمت سرور (`lib/dictionary.ts`):** در سرور تنها فایل JSON زبان درخواستی بارگذاری می‌شود؛ بدین ترتیب کلاینت هیچ سربار اضافی بابت دیکشنری زبان‌های دیگر دریافت نمی‌کند.
+3. **انتخاب‌گر زبان شیشه‌ای (`LanguageSwitcher.tsx`):** کامپوننت مینیمال کلاینت که زبان انتخابی را در کوکی ذخیره کرده، مسیر جاری را تغییر می‌دهد و با کلیک به خارج بسته می‌شود.
+
+#### سیستم طراحی اتمیک (Atomic UI)
+* **کانتینر ساختاری (`Container.tsx`):** ایجاد حاشیه استاندارد (`max-w-7xl mx-auto px-6 lg:px-8`) در تمامی مانیتورها و تبلت‌ها.
+* **بستر شیشه‌ای (`GlassCard.tsx`):** اعمال فیلتر بلور پس‌زمینه (`backdrop-blur-md`) با شتاب‌دهنده سخت‌افزاری بر روی سطوح سرمه‌ای شفاف.
+* **تایپوگرافی هوشمند (`SectionHeader.tsx`):** جداسازی خودکار `accentWord` و استایل‌دهی به آن با گرادیان طلایی به همراه خط زیرین جهت‌دار.
+
+#### ایزولاسیون چیدمان‌های دوجهته (Bidirectional Isolation)
+با وجود اینکه کل چارچوب به صورت داینامیک بین `rtl` و `ltr` جابجا می‌شود، بخش‌های کدنویسی و فنی—مانند ترمینال تعاملی در بخش Hero و فیلد ورودی ایمیل در فرم تماس—به صورت صریح با `dir="ltr"` و `text-left` مقید شده‌اند تا از برعکس شدن علائم نگارشی و پرانتزها جلوگیری گردد.
+
+#### سرور اکشن‌ها و اعتبارسنجی دو لایه
+1. **لایه کلاینت:** فرم در `Contact.tsx` با `react-hook-form` فیلدها را ثبت کرده و با `zodResolver` اعتبارسنجی می‌کند؛ در صورت وجود خطا هیچ ریکوئستی به شبکه ارسال نمی‌شود.
+2. **لایه سرور:** تابع `submitContactForm` در سرور اکشن، داده‌ها را مجدداً با اسکیمای Zod اعتبارسنجی می‌کند تا در صورت دور زدن فرانت‌اند، داده نامعتبر نفوذ نکند.
+3. **سرویس ایمیل Resend:** پس از تأیید داده‌ها، ایمیل با استایل تیره و راست‌چین سازمانی مستقیماً به صندوق پستی تعیین‌شده فوروارد می‌شود.
+
+---
+
+### ۵. راهنمای اجرا و توسعه محلی
+
+#### پیش‌نیازها
+* **Node.js:** نسخه `22.x` به بالا
+* **Package Manager:** `npm` نسخه `10.x` به بالا
+
+#### مراحل نصب و اجرا
+جهت جلوگیری از ناهماهنگی نسخه‌ها، از دستور `npm ci` استفاده نمایید:
+
+```bash
+# ۱. دریافت مخزن پروژه
+git clone https://github.com/mahdimohebinia/mahdi-portfolio.git
+cd mahdi-portfolio
+
+# ۲. نصب قطعی وابستگی‌ها مطابق با فایل lock
+npm ci
+
+# ۳. تنظیم متغیرهای محیطی در فایل .env.local
+# RESEND_API_KEY=re_...
+# CONTACT_EMAIL=your-email@example.com
+
+# ۴. اجرای سرور توسعه محلی
+npm run dev
+```
+
+پرتال در نشانی `http://localhost:3000` در دسترس خواهد بود.
+
+#### تست‌های کنترل کیفیت (Quality Assurance)
+پیش از ارسال کامیت، دستورات زیر را جهت اطمینان از سلامت پروژه اجرا کنید:
+
+```bash
+# بررسی کیفیت کد با لینتر
+npm run lint
+
+# بررسی سخت‌گیرانه تایپ‌های تایپ‌اسکریپت
+npx tsc --noEmit
+
+# کامپایل پروداکشن پروژه و تولید سرویس‌ورکر PWA
+npm run build
+```
+
+---
+
+### ۶. ساخت ایمیج داکر و استقرار (Docker)
+
+پروژه دارای یک `Dockerfile` چندمرحله‌ای بهینه‌سازی‌شده برای محیط‌های ابری و سرورهای توزیع‌شده است.
+
+#### ساخت و اجرای کانتینر:
+
+```bash
+# ۱. ساخت ایمیج داکر پروداکشن
+docker build -t mahdi-portfolio .
+
+# ۲. اجرای کانتینر در پس‌زمینه با پورت ۳۰۰۰
+docker run -d \
+  --name portfolio-app \
+  -p 3000:3000 \
+  --restart unless-stopped \
+  mahdi-portfolio
+```
+
+#### ملاحظات امنیتی داکر:
+* استفاده از توزیع فوق‌العاده سبک `node:22-alpine` جهت کاهش چشمگیر سطح آسیب‌پذیری (CVE).
+* اجرای کامل پروسه بدون دسترسی ریشه با حساب کاربری سیستمی `nextjs:nodejs` (UID 1001).
+* کاهش حجم نهایی ایمیج از ۸۰۰ مگابایت به کمتر از ۱۵۰ مگابایت با بهره‌گیری از خروجی Standalone.
+
+---
+
+### ۷. پایپ‌لاین کنترل کیفیت در گیت‌هاب (GitHub Actions CI)
+
+تمام کامیت‌ها و پول‌ریکوئست‌های ارسالی به شاخه `main` به صورت خودکار توسط پایپ‌لاین `.github/workflows/ci.yml` بررسی می‌شوند:
+1. ارزیابی استاتیک کد با ESLint
+2. اعتبارسنجی کامپایلر تایپ‌اسکریپت (`tsc --noEmit`)
+3. آزمایش ساخت موفق ایمیج داکر و خروجی Standalone
+
+---
+
+### ۸. لایسنس
+
+این پروژه تحت مجوز متن‌باز **[MIT License](LICENSE)** منتشر شده است. طراحی و توسعه توسط **مهدی محبی‌نیا**.

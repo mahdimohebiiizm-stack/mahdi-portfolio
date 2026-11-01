@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useActionState, useEffect } from "react";
+import React, { useActionState, useEffect, useMemo } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  contactSchema,
-  type ContactFormData,
-} from "@/lib/validations/contact";
+import { z } from "zod";
+import type { ContactFormData } from "@/lib/validations/contact";
 import {
   submitContactForm,
   type ContactActionState,
@@ -16,15 +14,34 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
 import FadeInUp from "@/components/ui/motion/FadeInUp";
+import type { ContactDict } from "@/lib/dictionary";
+
+interface ContactProps {
+  dict: ContactDict;
+}
 
 const initialActionState: ContactActionState = {
   success: false,
 };
 
-export default function Contact() {
+export default function Contact({ dict }: ContactProps) {
   const [state, formAction, isPending] = useActionState(
     submitContactForm,
     initialActionState
+  );
+
+  const localizedSchema = useMemo(
+    () =>
+      z.object({
+        name: z.string().trim().min(2, dict.validation.nameMin),
+        email: z.string().trim().email(dict.validation.emailValid),
+        message: z
+          .string()
+          .trim()
+          .min(10, dict.validation.messageMin)
+          .max(500, dict.validation.messageMax),
+      }),
+    [dict.validation]
   );
 
   const {
@@ -33,7 +50,7 @@ export default function Contact() {
     reset,
     formState: { errors },
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+    resolver: zodResolver(localizedSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -63,9 +80,9 @@ export default function Contact() {
       <Container>
         <FadeInUp>
           <SectionHeader
-            title="ارتباط و همکاری"
-            accentWord="همکاری"
-            subtitle="برای تبادل نظر فنی، مشاوره معماری یا آغاز پروژه‌های سازمانی، پیام بگذارید."
+            title={dict.header.title}
+            accentWord={dict.header.accentWord}
+            subtitle={dict.header.subtitle}
           />
         </FadeInUp>
 
@@ -90,6 +107,31 @@ export default function Contact() {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
+                <span className="font-medium">
+                  {state.message || dict.messages.success}
+                </span>
+              </div>
+            )}
+
+            {state.message && !state.success && (
+              <div
+                role="alert"
+                className="mb-6 rounded-xl border border-rose-500/30 bg-rose-500/10 p-4 text-rose-400 text-sm flex items-center gap-3"
+              >
+                <svg
+                  className="w-5 h-5 shrink-0"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
                 <span className="font-medium">{state.message}</span>
               </div>
             )}
@@ -105,12 +147,12 @@ export default function Contact() {
                   htmlFor="contact-name"
                   className="text-sm font-medium text-slate-200"
                 >
-                  نام و نام خانوادگی
+                  {dict.form.nameLabel}
                 </label>
                 <input
                   id="contact-name"
                   type="text"
-                  placeholder="مثلاً: مهدی محبی نیا"
+                  placeholder={dict.form.namePlaceholder}
                   aria-invalid={Boolean(errors.name || state.errors?.name)}
                   aria-describedby={
                     errors.name || state.errors?.name
@@ -136,13 +178,13 @@ export default function Contact() {
                   htmlFor="contact-email"
                   className="text-sm font-medium text-slate-200"
                 >
-                  آدرس ایمیل
+                  {dict.form.emailLabel}
                 </label>
                 <input
                   id="contact-email"
                   type="email"
                   dir="ltr"
-                  placeholder="name@company.com"
+                  placeholder={dict.form.emailPlaceholder}
                   aria-invalid={Boolean(errors.email || state.errors?.email)}
                   aria-describedby={
                     errors.email || state.errors?.email
@@ -168,12 +210,12 @@ export default function Contact() {
                   htmlFor="contact-message"
                   className="text-sm font-medium text-slate-200"
                 >
-                  متن پیام
+                  {dict.form.messageLabel}
                 </label>
                 <textarea
                   id="contact-message"
                   rows={4}
-                  placeholder="توضیحات در خصوص نیازمندی‌ها، ابعاد پروژه یا محوریت جلسه..."
+                  placeholder={dict.form.messagePlaceholder}
                   aria-invalid={Boolean(
                     errors.message || state.errors?.message
                   )}
@@ -208,10 +250,10 @@ export default function Contact() {
                   {isPending ? (
                     <>
                       <span className="w-4 h-4 border-2 border-navy-dark border-t-transparent rounded-full animate-spin" />
-                      <span>در حال ارسال پیام...</span>
+                      <span>{dict.form.submittingBtn}</span>
                     </>
                   ) : (
-                    <span>ارسال پیام</span>
+                    <span>{dict.form.submitBtn}</span>
                   )}
                 </Button>
               </div>

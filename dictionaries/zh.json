@@ -1,0 +1,162 @@
+{
+  "navbar": {
+    "brand": "M.M.NIA",
+    "skills": "专业技能",
+    "projects": "代表作品",
+    "contact": "联系我"
+  },
+  "hero": {
+    "statusBadge": "可承接企业级项目",
+    "titlePrefix": "软件架构师 & ",
+    "titleHighlight": "全栈开发工程师",
+    "description": "基于整洁架构（Clean Architecture）设计与实现高扩展、高安全与高性能系统，深耕企业级 Next.js 与 Flutter 生态。",
+    "projectsBtn": "查看项目",
+    "resumeBtn": "下载简历",
+    "terminal": {
+      "fileName": "architect-profile.ts",
+      "comment": "// Enterprise Software Architect Profile",
+      "name": "Mahdi Mohebi Nia",
+      "role": "Principal Architect",
+      "mindset": "Clean Architecture & Zero Tech Debt",
+      "statusText": "system initialized"
+    }
+  },
+  "skills": {
+    "header": {
+      "title": "技术栈与专长",
+      "accentWord": "专长",
+      "subtitle": "精通现代软件工程工具链，严格遵循整洁架构规范"
+    },
+    "domains": [
+      {
+        "id": "frontend-uiux",
+        "title": "Frontend & UI/UX",
+        "description": "构建现代化交互界面，优化渲染性能，基于前沿标准打造高扩展设计系统。",
+        "skills": [
+          "Next.js",
+          "React",
+          "Tailwind v4",
+          "TypeScript",
+          "Clean Architecture",
+          "UI/UX Design"
+        ]
+      },
+      {
+        "id": "mobile-iot",
+        "title": "Mobile & IoT",
+        "description": "基于 BLoC 架构的跨平台应用研发、离线优先机制及嵌入式硬件工程。",
+        "skills": [
+          "Flutter",
+          "Dart",
+          "BLoC Pattern",
+          "Offline-First",
+          "C++",
+          "Arduino / ESP32"
+        ]
+      },
+      {
+        "id": "backend-architecture",
+        "title": "Backend & Architecture",
+        "description": "高可用服务架构设计、关系型数据库工程、企业级安全保障与自动化部署流水线。",
+        "skills": [
+          "FastAPI",
+          "PostgreSQL",
+          "Docker",
+          "Monorepo",
+          "CI/CD",
+          "Enterprise Security"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "header": {
+      "title": "精选项目",
+      "accentWord": "精选",
+      "subtitle": "企业级实战经验与高可扩展系统架构落地"
+    },
+    "items": [
+      {
+        "id": "elevator-eco",
+        "title": "Elevator Ecosystem",
+        "role": "全栈开发负责人兼系统架构师",
+        "organization": "A.manage / Shopbot",
+        "description": [
+          "主导企业级 Monorepo 架构，无缝集成 Next.js/FastAPI 门户与 Flutter 移动端。",
+          "贯彻整洁架构、BLoC 状态管理与基于 FIFO 的离线队列机制。",
+          "构建高可靠单数据源（Single Source of Truth）后端，整合 PostgreSQL 与 RBAC 权限。"
+        ],
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+      },
+      {
+        "id": "asanro",
+        "title": "Corporate Web Platform",
+        "role": "全栈 Web 工程师",
+        "organization": "Asanro Etminan Amir",
+        "description": [
+          "为电梯安装企业构建坚固、高性能的企业级 Web 前端平台。",
+          "将品牌理念转化为奢华商务视觉质感（海军蓝与鎏金配色）。"
+        ],
+        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+      },
+      {
+        "id": "iot-telemetry",
+        "title": "IoT Telemetry System",
+        "role": "软硬件工程师",
+        "organization": "学士学位毕业设计",
+        "description": [
+          "使用 C++（Arduino 边缘节点）研发高速信号采集的物联网遥测系统。",
+          "开发集成 WebSocket 的跨平台 Flutter 应用，实现毫秒级（<50ms）低延迟监控。"
+        ],
+        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
+      },
+      {
+        "id": "taskflow",
+        "title": "TaskFlow",
+        "role": "移动应用工程师",
+        "organization": "独立开发项目",
+        "description": [
+          "纯 Flutter 打造的高性能效能管理应用。",
+          "深度集成响应式状态管理机制与高鲁棒性本地数据持久化。"
+        ],
+        "techStack": ["Flutter", "Dart", "State Management"]
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "联系与合作",
+      "accentWord": "合作",
+      "subtitle": "欢迎就技术咨询、架构评审或企业级合作项目进行沟通洽谈。"
+    },
+    "form": {
+      "nameLabel": "姓名",
+      "namePlaceholder": "例如：Mahdi Mohebi Nia",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "name@company.com",
+      "messageLabel": "留言内容",
+      "messagePlaceholder": "关于项目规模、技术诉求或会议议程的详细说明...",
+      "submitBtn": "发送留言",
+      "submittingBtn": "正在发送..."
+    },
+    "validation": {
+      "nameMin": "姓名至少包含 2 个字符。",
+      "emailValid": "请输入有效的电子邮箱地址。",
+      "messageMin": "留言内容至少需要 10 个字符。",
+      "messageMax": "留言内容不能超过 500 个字符。"
+    },
+    "messages": {
+      "success": "您的信息已成功送达，我将尽快回复。",
+      "error": "处理邮件时出现错误，请稍后重试。"
+    }
+  },
+  "footer": {
+    "kicker": "LET'S BUILD TOGETHER",
+    "title": "打造世界级软件解决方案",
+    "accentWord": "世界级",
+    "description": "将复杂的商业挑战转化为安全、高扩展且无懈可击的基础设施。我们不仅是编写代码，更是雕琢守护产品未来的可持续架构。",
+    "ctaBtn": "开启技术洽谈",
+    "copyright": "© 2026 Mahdi Mohebi Nia",
+    "tagline": "Engineered with Next.js & Clean Architecture"
+  }
+}

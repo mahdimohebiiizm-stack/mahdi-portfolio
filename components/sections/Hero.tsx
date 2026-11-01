@@ -4,8 +4,13 @@ import GlassCard from "@/components/ui/GlassCard";
 import StaggerContainer from "@/components/ui/motion/StaggerContainer";
 import FadeInUp from "@/components/ui/motion/FadeInUp";
 import FadeInScale from "@/components/ui/motion/FadeInScale";
+import type { HeroDict } from "@/lib/dictionary";
 
-export default function Hero() {
+interface HeroProps {
+  dict: HeroDict;
+}
+
+export default function Hero({ dict }: HeroProps) {
   return (
     <section
       id="hero"
@@ -23,7 +28,7 @@ export default function Hero() {
 
       <Container>
         <StaggerContainer className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          {/* Content Column (RTL) */}
+          {/* Content Column */}
           <FadeInUp
             immediate
             delay={0.1}
@@ -35,27 +40,30 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
               </span>
-              <span>Available for Enterprise Projects</span>
+              <span>{dict.statusBadge}</span>
             </div>
 
             {/* Main Typography */}
             <h1 className="text-3xl font-extrabold leading-tight text-white sm:text-4xl lg:text-5xl">
-              معمار نرم‌افزار و{" "}
+              {dict.titlePrefix}
               <span className="bg-gradient-to-r from-amber-500 to-yellow-300 bg-clip-text text-transparent">
-                توسعه‌دهنده فول‌استک
+                {dict.titleHighlight}
               </span>
             </h1>
 
             {/* Description */}
             <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              طراحی و پیاده‌سازی سیستم‌های مقیاس‌پذیر، امن و پرفورمنس‌محور مبتنی بر
-              Clean Architecture، با تمرکز بر اکوسیستم‌های Next.js و Flutter در کلاس سازمانی.
+              {dict.description}
             </p>
 
             {/* Actions */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <Button variant="primary">مشاهده پروژه‌ها</Button>
-              <Button variant="outline">دانلود رزومه</Button>
+              <a href="#projects">
+                <Button variant="primary">{dict.projectsBtn}</Button>
+              </a>
+              <a href="#contact">
+                <Button variant="outline">{dict.resumeBtn}</Button>
+              </a>
             </div>
           </FadeInUp>
 
@@ -73,7 +81,7 @@ export default function Hero() {
                   <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
                 </div>
                 <span className="text-xs font-mono text-zinc-400">
-                  architect-profile.ts
+                  {dict.terminal.fileName}
                 </span>
                 <div className="w-10" />
               </div>
@@ -83,24 +91,31 @@ export default function Hero() {
                 dir="ltr"
                 className="p-5 text-left font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto text-zinc-300"
               >
-                <p className="text-zinc-500">
-                  {"// Enterprise Software Architect Profile"}
-                </p>
+                <p className="text-zinc-500">{dict.terminal.comment}</p>
                 <p className="mt-2">
                   <span className="text-purple-400">const</span>{" "}
                   <span className="text-blue-400">profile</span> = &#123;
                 </p>
                 <p className="ps-4">
                   <span className="text-zinc-400">name:</span>{" "}
-                  <span className="text-amber-300">&quot;Mahdi Mohebi Nia&quot;</span>,
+                  <span className="text-amber-300">
+                    &quot;{dict.terminal.name}&quot;
+                  </span>
+                  ,
                 </p>
                 <p className="ps-4">
                   <span className="text-zinc-400">role:</span>{" "}
-                  <span className="text-amber-300">&quot;Principal Architect&quot;</span>,
+                  <span className="text-amber-300">
+                    &quot;{dict.terminal.role}&quot;
+                  </span>
+                  ,
                 </p>
                 <p className="ps-4">
                   <span className="text-zinc-400">mindset:</span>{" "}
-                  <span className="text-amber-300">&quot;Clean Architecture &amp; Zero Tech Debt&quot;</span>,
+                  <span className="text-amber-300">
+                    &quot;{dict.terminal.mindset}&quot;
+                  </span>
+                  ,
                 </p>
                 <p className="ps-4">
                   <span className="text-zinc-400">stack:</span> [
@@ -108,7 +123,10 @@ export default function Hero() {
                 <p className="ps-8">
                   <span className="text-emerald-400">&quot;Next.js&quot;</span>,{" "}
                   <span className="text-emerald-400">&quot;React&quot;</span>,{" "}
-                  <span className="text-emerald-400">&quot;Tailwind v4&quot;</span>,
+                  <span className="text-emerald-400">
+                    &quot;Tailwind v4&quot;
+                  </span>
+                  ,
                 </p>
                 <p className="ps-8">
                   <span className="text-emerald-400">&quot;Flutter&quot;</span>,{" "}
@@ -123,7 +141,9 @@ export default function Hero() {
 
                 <div className="mt-4 flex items-center gap-2 text-zinc-500">
                   <span className="text-emerald-400 font-bold">$</span>
-                  <span className="text-zinc-400">system initialized</span>
+                  <span className="text-zinc-400">
+                    {dict.terminal.statusText}
+                  </span>
                   <span className="h-4 w-2 animate-pulse bg-gold" />
                 </div>
               </div>
