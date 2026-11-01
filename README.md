@@ -13,6 +13,16 @@
 
 </div>
 
+<div align="center">
+  <br />
+  <a href="#english-version"><strong>🇺🇸 Read Documentation in English</strong></a>
+  &nbsp; | &nbsp;
+  <a href="#persian-version"><strong>🇮🇷 مطالعه مستندات معماری به زبان فارسی</strong></a>
+  <br /><br />
+</div>
+
+<a name="english-version"></a>
+
 ---
 
 # Mahdi Mohebi Nia | Enterprise Portfolio & Platform
@@ -270,6 +280,7 @@ This project is licensed under the [MIT License](LICENSE). Engineered by **Mahdi
 
 ---
 
+<a name="persian-version"></a>
 ## 🇮🇷 راهنمای فارسی (Persian Architectural Documentation)
 
 پرتال شخصی و پلتفرم مهندسی سازمانی **مهدی محبی‌نیا**؛ پیاده‌سازی شده با فریمورک Next.js 16 (معماری App Router)، کامپوننت‌های سمت سرور React 19، سیستم استایلینگ Tailwind CSS v4، سیستم بین‌المللی‌سازی اختصاصی ۵ زبانه و زیرساخت پیشرفته Progressive Web App (PWA) با قابلیت فعالیت کامل آفلاین (Offline-First). این پروژه با پایبندی سخت‌گیرانه به رویکرد **Zero Technical Debt** (بدهی فنی صفر) و الگوهای Clean Architecture مهندسی شده است.
