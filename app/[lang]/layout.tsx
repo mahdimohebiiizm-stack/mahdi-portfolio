@@ -125,7 +125,11 @@ export default async function RootLayout({
       <body
         className={`${vazirmatn.className} min-h-screen flex flex-col font-sans overflow-x-hidden max-w-full`}
       >
-        <Navbar dict={dict.navbar} currentLang={validLang} />
+        <Navbar
+          dict={dict.navbar}
+          currentLang={validLang}
+          projects={dict.projects.items}
+        />
         <main className="flex-1 overflow-x-hidden max-w-full">{children}</main>
         <Footer dict={dict.footer} />
       </body>
