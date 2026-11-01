@@ -61,9 +61,9 @@ export default function Navbar({ dict, currentLang }: NavbarProps) {
                   </svg>
                 </a>
 
-                {/* Dropdown Menu (UX Redesigned & 100% i18n compliant) */}
-                <div className="absolute top-full start-0 pt-4 hidden group-hover:block group-focus-within:block z-50">
-                  <div className="flex flex-col min-w-[240px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden p-1.5">
+                {/* Dropdown Menu (UX Redesigned, mobile-constrained & 100% i18n compliant) */}
+                <div className="absolute top-full end-0 sm:end-auto sm:start-0 pt-4 hidden group-hover:block group-focus-within:block z-50">
+                  <div className="flex flex-col w-[calc(100vw-2.5rem)] max-w-[260px] sm:w-auto sm:min-w-[240px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden p-1.5">
                     {/* Step A: All Projects Link */}
                     <a
                       href="#projects"

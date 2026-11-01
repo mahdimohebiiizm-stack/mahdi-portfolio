@@ -28,12 +28,12 @@ export default function Hero({ dict }: HeroProps) {
       </div>
 
       <Container>
-        <StaggerContainer className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <StaggerContainer className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14 min-w-0 max-w-full">
           {/* Content Column */}
           <FadeInUp
             immediate
             delay={0.1}
-            className="flex flex-col items-start gap-6 text-start"
+            className="flex flex-col items-start gap-6 text-start min-w-0 max-w-full"
           >
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2.5 rounded-full border border-gold/20 bg-gold/10 px-4 py-1.5 text-xs font-medium text-gold-light shadow-sm shadow-gold/10">
@@ -58,26 +58,27 @@ export default function Hero({ dict }: HeroProps) {
             </p>
 
             {/* Actions: Primary Dominant CTA vs Secondary Ghost CTA */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <a href="#projects" className="relative group inline-flex">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 w-full sm:w-auto">
+              <a href="#projects" className="relative group inline-flex w-full sm:w-auto">
                 <span
                   aria-hidden="true"
                   className="pointer-events-none absolute -inset-0.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 opacity-60 blur-sm group-hover:opacity-100 transition-opacity duration-300 animate-pulse -z-10"
                 />
                 <Button
                   variant="primary"
-                  className="relative font-bold text-navy-dark bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-gold/30 hover:shadow-gold/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.99]"
+                  className="w-full sm:w-auto relative font-bold text-navy-dark bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-gold/30 hover:shadow-gold/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.99]"
                 >
                   {dict.projectsBtn}
                 </Button>
               </a>
+
               {/* Grouped Resume Download Dropdown */}
-              <div className="relative group/resume inline-block">
+              <div className="relative group/resume inline-block w-full sm:w-auto">
                 <button
                   type="button"
                   aria-haspopup="true"
                   aria-label={dict.resumeBtn}
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/20 bg-navy/40 backdrop-blur-md text-sm font-medium text-slate-300 group-hover/resume:text-white group-hover/resume:border-gold/60 group-hover/resume:bg-white/5 active:bg-white/10 transition-all duration-300 cursor-pointer shadow-none hover:shadow-sm"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-white/20 bg-navy/40 backdrop-blur-md text-sm font-medium text-slate-300 group-hover/resume:text-white group-hover/resume:border-gold/60 group-hover/resume:bg-white/5 active:bg-white/10 transition-all duration-300 cursor-pointer shadow-none hover:shadow-sm"
                 >
                   <svg
                     className="w-4 h-4 text-gold shrink-0"
@@ -110,9 +111,9 @@ export default function Hero({ dict }: HeroProps) {
                   </svg>
                 </button>
 
-                {/* Dropdown Menu (Two-layer padding-bridge) */}
-                <div className="absolute top-full start-0 pt-2 hidden group-hover/resume:block group-focus-within/resume:block z-50">
-                  <div className="flex flex-col min-w-[210px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden p-1.5 divide-y divide-white/5">
+                {/* Dropdown Menu (Two-layer padding-bridge with responsive mobile bounds) */}
+                <div className="absolute top-full start-0 pt-2 hidden group-hover/resume:block group-focus-within/resume:block z-50 w-full sm:w-auto">
+                  <div className="flex flex-col w-full sm:w-auto sm:min-w-[210px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden p-1.5 divide-y divide-white/5">
                     {/* Option 1: PDF Version */}
                     <a
                       href="/Mahdi_Mohebi_Nia_Resume_ATS.pdf"
@@ -171,12 +172,12 @@ export default function Hero({ dict }: HeroProps) {
           </FadeInUp>
 
           {/* Visual Column (Mock Terminal - LTR Strict) */}
-          <FadeInScale immediate delay={0.25} className="w-full">
-            <GlassCard className="relative p-0 overflow-hidden border border-gold/20 shadow-2xl shadow-navy-dark/80">
+          <FadeInScale immediate delay={0.25} className="w-full min-w-0 max-w-full">
+            <GlassCard className="relative p-0 overflow-hidden border border-gold/20 shadow-2xl shadow-navy-dark/80 min-w-0 max-w-full">
               {/* Terminal Window Header */}
               <div
                 dir="ltr"
-                className="flex items-center justify-between border-b border-gold/10 bg-navy/60 px-4 py-3"
+                className="flex items-center justify-between border-b border-gold/10 bg-navy/60 px-3 sm:px-4 py-2.5 sm:py-3 min-w-0"
               >
                 <div className="flex items-center gap-2">
                   <span className="h-3 w-3 rounded-full bg-rose-500/80" />
@@ -192,7 +193,7 @@ export default function Hero({ dict }: HeroProps) {
               {/* Terminal Content (LTR Strict) */}
               <div
                 dir="ltr"
-                className="p-5 text-left font-mono text-xs sm:text-sm leading-relaxed overflow-x-auto text-zinc-300"
+                className="p-3.5 sm:p-5 text-left font-mono text-[11px] sm:text-xs md:text-sm leading-relaxed overflow-x-auto text-zinc-300 min-w-0"
               >
                 <p className="text-zinc-500">{dict.terminal.comment}</p>
                 <p className="mt-2">

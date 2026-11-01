@@ -114,13 +114,13 @@ export default async function RootLayout({
     <html
       lang={validLang}
       dir={isRtl ? "rtl" : "ltr"}
-      className={`${vazirmatn.variable} scroll-smooth`}
+      className={`${vazirmatn.variable} scroll-smooth overflow-x-hidden`}
     >
       <body
-        className={`${vazirmatn.className} min-h-screen flex flex-col font-sans`}
+        className={`${vazirmatn.className} min-h-screen flex flex-col font-sans overflow-x-hidden max-w-full`}
       >
         <Navbar dict={dict.navbar} currentLang={validLang} />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 overflow-x-hidden max-w-full">{children}</main>
         <Footer dict={dict.footer} />
       </body>
     </html>

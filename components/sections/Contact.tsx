@@ -86,8 +86,8 @@ export default function Contact({ dict }: ContactProps) {
           />
         </FadeInUp>
 
-        <FadeInUp delay={0.15} className="max-w-2xl mx-auto mt-14">
-          <GlassCard className="p-8 md:p-10 border border-gold/20 shadow-2xl shadow-navy-dark/60">
+        <FadeInUp delay={0.15} className="max-w-2xl mx-auto mt-14 min-w-0 max-w-full">
+          <GlassCard className="p-5 sm:p-8 md:p-10 min-w-0 max-w-full border border-gold/20 shadow-2xl shadow-navy-dark/60">
             {state.success && (
               <div
                 role="status"

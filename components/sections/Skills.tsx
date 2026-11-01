@@ -105,14 +105,14 @@ export default function Skills({ dict }: SkillsProps) {
           />
         </FadeInUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 min-w-0 max-w-full">
           {dict.domains.map((domain, index) => (
             <FadeInUp
               key={domain.id}
               delay={index * 0.12}
-              className="h-full"
+              className="h-full min-w-0 max-w-full"
             >
-              <GlassCard className="flex flex-col justify-between h-full gap-6 p-6 border border-gold/15">
+              <GlassCard className="flex flex-col justify-between h-full gap-6 p-5 sm:p-6 min-w-0 max-w-full border border-gold/15">
                 <div className="flex flex-col gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center shadow-sm shadow-gold/10">
                     {DOMAIN_ICONS[domain.id]}
