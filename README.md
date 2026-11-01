@@ -1,6 +1,10 @@
 <div align="center">
+  <a href="https://mahdi-portfolio-cyan.vercel.app/" target="_blank">
+    <img src="docs/assets/hero-banner.png" alt="Mahdi Mohebi Nia - Enterprise Portfolio" width="100%" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+  </a>
+</div>
 
-# 🌐 <a href="https://mahdi-portfolio-cyan.vercel.app/">VIEW LIVE ENTERPRISE PORTFOLIO</a>
+<div align="center">
 
 [![Production Deployment](https://img.shields.io/badge/Production%20Deployment-Vercel%20Live-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://mahdi-portfolio-cyan.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.4.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
