@@ -76,7 +76,7 @@ export default function Contact({ dict }: ContactProps) {
   }, [state.success, reset]);
 
   return (
-    <section id="contact" className="relative py-16 md:py-24 overflow-hidden">
+    <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
       <Container>
         <FadeInUp>
           <SectionHeader
@@ -160,7 +160,7 @@ export default function Contact({ dict }: ContactProps) {
                       : undefined
                   }
                   {...register("name")}
-                  className="w-full rounded-xl bg-navy/80 border border-gold/20 px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                  className="w-full rounded-xl bg-navy/80 border border-gold/20 px-4 py-3 text-white placeholder-slate-500 transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy/95"
                 />
                 {(errors.name?.message || state.errors?.name?.[0]) && (
                   <p
@@ -192,7 +192,7 @@ export default function Contact({ dict }: ContactProps) {
                       : undefined
                   }
                   {...register("email")}
-                  className="w-full rounded-xl bg-navy/80 border border-gold/20 px-4 py-3 text-left font-mono text-white placeholder-slate-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold"
+                  className="w-full rounded-xl bg-navy/80 border border-gold/20 px-4 py-3 text-left font-mono text-white placeholder-slate-500 transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy/95"
                 />
                 {(errors.email?.message || state.errors?.email?.[0]) && (
                   <p
@@ -225,7 +225,7 @@ export default function Contact({ dict }: ContactProps) {
                       : undefined
                   }
                   {...register("message")}
-                  className="w-full rounded-xl bg-navy/80 border border-gold/20 px-4 py-3 text-white placeholder-slate-500 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold resize-none"
+                  className="w-full rounded-xl bg-navy/80 border border-gold/20 px-4 py-3 text-white placeholder-slate-500 transition-all duration-200 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/50 focus:bg-navy/95 resize-none"
                 />
                 {(errors.message?.message ||
                   state.errors?.message?.[0]) && (
@@ -239,13 +239,17 @@ export default function Contact({ dict }: ContactProps) {
                 )}
               </div>
 
-              {/* Submit Button */}
-              <div className="pt-2">
+              {/* Submit Button with Dominant Primary CTA Glow */}
+              <div className="pt-2 relative group">
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-0.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 opacity-60 blur-sm group-hover:opacity-100 transition-opacity duration-300 animate-pulse -z-10"
+                />
                 <Button
                   type="submit"
                   variant="primary"
                   disabled={isPending}
-                  className="w-full py-3.5 text-base font-bold flex items-center justify-center gap-2"
+                  className="relative w-full py-3.5 text-base font-bold bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 text-navy-dark shadow-xl shadow-gold/30 hover:shadow-gold/50 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   {isPending ? (
                     <>

@@ -1,4 +1,5 @@
 import React from "react";
+import HighlightedText from "@/components/ui/HighlightedText";
 
 export interface SectionHeaderProps {
   title: string;
@@ -51,7 +52,7 @@ export default function SectionHeader({
       <div className="h-1 w-20 bg-gradient-to-r from-gold to-gold-dark rounded-full mt-3" />
       {subtitle && (
         <p className="text-zinc-400 text-sm md:text-base mt-3 max-w-2xl leading-relaxed">
-          {subtitle}
+          <HighlightedText text={subtitle} />
         </p>
       )}
     </div>

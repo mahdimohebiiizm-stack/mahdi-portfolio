@@ -1,6 +1,7 @@
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
+import HighlightedText from "@/components/ui/HighlightedText";
 import StaggerContainer from "@/components/ui/motion/StaggerContainer";
 import FadeInUp from "@/components/ui/motion/FadeInUp";
 import FadeInScale from "@/components/ui/motion/FadeInScale";
@@ -53,16 +54,30 @@ export default function Hero({ dict }: HeroProps) {
 
             {/* Description */}
             <p className="max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg">
-              {dict.description}
+              <HighlightedText text={dict.description} />
             </p>
 
-            {/* Actions */}
+            {/* Actions: Primary Dominant CTA vs Secondary Ghost CTA */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
-              <a href="#projects">
-                <Button variant="primary">{dict.projectsBtn}</Button>
+              <a href="#projects" className="relative group inline-flex">
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-0.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-400 opacity-60 blur-sm group-hover:opacity-100 transition-opacity duration-300 animate-pulse -z-10"
+                />
+                <Button
+                  variant="primary"
+                  className="relative font-bold text-navy-dark bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-500 hover:from-amber-300 hover:to-yellow-300 shadow-xl shadow-gold/30 hover:shadow-gold/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.99]"
+                >
+                  {dict.projectsBtn}
+                </Button>
               </a>
               <a href="#contact">
-                <Button variant="outline">{dict.resumeBtn}</Button>
+                <Button
+                  variant="outline"
+                  className="border border-white/20 bg-transparent text-slate-300 hover:text-white hover:border-gold/60 hover:bg-white/5 active:bg-white/10 transition-all duration-300 shadow-none hover:shadow-sm"
+                >
+                  {dict.resumeBtn}
+                </Button>
               </a>
             </div>
           </FadeInUp>

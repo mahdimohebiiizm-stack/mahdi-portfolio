@@ -63,12 +63,40 @@ export default function Navbar({ dict, currentLang }: NavbarProps) {
 
                 {/* Dropdown Menu (Two-layer padding-bridge to eliminate hover dead zones) */}
                 <div className="absolute top-full start-0 pt-4 hidden group-hover:block group-focus-within:block z-50">
-                  <div className="flex flex-col min-w-[220px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden">
+                  <div className="flex flex-col min-w-[270px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden">
                     <a
                       href="#projects"
                       className="hover:bg-white/5 px-4 py-3 transition-colors text-sm text-slate-200 hover:text-white"
                     >
                       All Projects
+                    </a>
+                    <a
+                      href="https://web-portal-ivory-nine.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-white/5 px-4 py-3 transition-colors text-emerald-400 hover:text-emerald-300 flex justify-between items-center text-sm border-t border-white/5 group/demo"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="relative flex h-2 w-2 shrink-0">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                        </span>
+                        <span>Elevator Ecosystem (Live Demo)</span>
+                      </div>
+                      <svg
+                        className="w-4 h-4 text-emerald-400/80 group-hover/demo:text-emerald-300 shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
                     </a>
                     <a
                       href="https://github.com/mahdimohebiiizm-stack/elevator-ecosystem"

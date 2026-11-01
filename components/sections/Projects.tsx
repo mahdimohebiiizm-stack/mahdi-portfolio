@@ -2,6 +2,7 @@ import React from "react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 import GlassCard from "@/components/ui/GlassCard";
+import HighlightedText from "@/components/ui/HighlightedText";
 import FadeInUp from "@/components/ui/motion/FadeInUp";
 import type { ProjectsDict } from "@/lib/dictionary";
 
@@ -11,7 +12,7 @@ interface ProjectsProps {
 
 export default function Projects({ dict }: ProjectsProps) {
   return (
-    <section id="projects" className="relative py-16 md:py-24 overflow-hidden">
+    <section id="projects" className="relative py-24 md:py-32 overflow-hidden">
       <Container>
         <FadeInUp>
           <SectionHeader
@@ -94,7 +95,9 @@ export default function Projects({ dict }: ProjectsProps) {
                     <div className="my-6">
                       <ul className="space-y-2.5 list-disc ps-5 marker:text-gold text-slate-300 text-sm leading-relaxed">
                         {project.description.map((item, idx) => (
-                          <li key={idx}>{item}</li>
+                          <li key={idx}>
+                            <HighlightedText text={item} />
+                          </li>
                         ))}
                       </ul>
                     </div>

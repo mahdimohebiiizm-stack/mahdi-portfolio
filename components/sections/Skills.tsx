@@ -2,6 +2,7 @@ import React from "react";
 import Container from "@/components/ui/Container";
 import SectionHeader from "@/components/ui/SectionHeader";
 import GlassCard from "@/components/ui/GlassCard";
+import HighlightedText from "@/components/ui/HighlightedText";
 import FadeInUp from "@/components/ui/motion/FadeInUp";
 import type { SkillsDict } from "@/lib/dictionary";
 
@@ -62,7 +63,7 @@ const DOMAIN_ICONS: Record<string, React.ReactNode> = {
 
 export default function Skills({ dict }: SkillsProps) {
   return (
-    <section id="skills" className="relative py-16 md:py-24 overflow-hidden">
+    <section id="skills" className="relative py-24 md:py-32 overflow-hidden">
       <Container>
         <FadeInUp>
           <SectionHeader
@@ -88,7 +89,7 @@ export default function Skills({ dict }: SkillsProps) {
                     {domain.title}
                   </h3>
                   <p className="text-sm text-slate-300 leading-relaxed">
-                    {domain.description}
+                    <HighlightedText text={domain.description} />
                   </p>
                 </div>
 
