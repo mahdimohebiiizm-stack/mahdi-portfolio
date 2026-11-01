@@ -105,51 +105,52 @@
     },
     "items": [
       {
-        "id": "elevator-eco",
-        "title": "Elevator Ecosystem",
+        "id": "elevator-ecosystem",
+        "title": "Elevator Ecosystem Monorepo",
         "role": "Ведущий Full-Stack разработчик и архитектор",
-        "organization": "A.manage / Shopbot",
+        "organization": "Enterprise Monorepo",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
-        "demo": "https://web-portal-ivory-nine.vercel.app/",
+        "liveUrl": "https://asanro.com",
+        "demo": "https://asanro.com",
         "description": [
-          "Архитектура корпоративного монорепозитория: портал Next.js/FastAPI и мобильное приложение Flutter.",
-          "Реализация Clean Architecture, паттерна BLoC и очереди Offline-First (FIFO).",
-          "Создание единого источника правды (SSOT) на PostgreSQL с ролевой моделью RBAC."
+          "Гибридная архитектура корпоративного уровня, объединяющая клиентский веб-портал на Next.js, масштабируемый бэкенд на FastAPI и мобильное приложение Flutter с поддержкой Offline-First для выездных специалистов.",
+          "Строгая реализация Clean Architecture с управлением состоянием через BLoC и надежной FIFO-очередью офлайн-синхронизации.",
+          "Единый источник истины (Single Source of Truth) на базе PostgreSQL с матрицей разграничения прав доступа (RBAC)."
         ],
-        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Clean Architecture"]
       },
       {
-        "id": "asanro",
-        "title": "Corporate Web Platform",
-        "role": "Full-Stack Web разработчик",
-        "organization": "Asanro Etminan Amir",
-        "description": [
-          "Создание надежного корпоративного веб-портала для компании по установке лифтов.",
-          "Воплощение корпоративной эстетики премиум-класса (Navy/Gold)."
-        ],
-        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
-      },
-      {
-        "id": "iot-telemetry",
-        "title": "IoT Telemetry System",
+        "id": "elevator-iot-telemetry",
+        "title": "IoT Elevator Telemetry",
         "role": "Инженер программного и аппаратного обеспечения",
-        "organization": "Дипломный проект бакалавра",
+        "organization": "Hardware-to-Cloud System",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "Разработка IoT-телеметрии на C++ (Arduino Edge) для высокоскоростного съема сигналов.",
-          "Создание Flutter-приложения с интеграцией WebSockets для мониторинга с задержкой менее 50 мс."
+          "Телеметрическая система Hardware-to-Cloud на C++ (периферийный узел Arduino) для высокоскоростного извлечения сигналов через битовые маски и трансляции сбоев в реальном времени через MQTT и WebSockets с задержкой менее 50 мс.",
+          "Отказоустойчивая промышленная прошивка с аппаратными сторожевыми таймерами (Watchdog) и неблокирующим вводом-выводом.",
+          "Полный цикл проектирования электронных схем и верификация в среде виртуального моделирования Proteus VSM."
         ],
-        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
+        "techStack": ["C++", "Arduino", "MQTT", "WebSockets", "Proteus VSM"]
       },
       {
-        "id": "taskflow",
-        "title": "TaskFlow",
-        "role": "Разработчик мобильных приложений",
-        "organization": "Независимый проект",
+        "id": "taskflow-app",
+        "title": "TaskFlow Workspace",
+        "role": "Архитектор мобильных приложений",
+        "organization": "Productivity Application",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "Высокопроизводительное приложение для продуктивности, созданное на Flutter.",
-          "Реактивное управление состоянием и надежная локальная обработка данных."
+          "Высокопроизводительное реактивное мобильное приложение для управления задачами на Flutter и Dart с локальной бизнес-логикой, персистентным хранилищем на базе SQLite и надежной архитектурой BLoC.",
+          "Плавный интерфейс с жестовым управлением, кастомными микроанимациями и поддержкой динамических тем оформления.",
+          "Оптимизированная схема реляционной базы данных для мгновенного выполнения запросов без просадки частоты кадров."
         ],
-        "techStack": ["Flutter", "Dart", "State Management"]
+        "techStack": ["Flutter", "Dart", "BLoC Pattern", "SQLite", "UI/UX"]
       }
     ]
   },

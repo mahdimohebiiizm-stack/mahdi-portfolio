@@ -98,7 +98,7 @@ export default function Navbar({ dict, currentLang }: NavbarProps) {
 
                       {/* Sub-item 1: Live Demo */}
                       <a
-                        href="https://web-portal-ivory-nine.vercel.app/"
+                        href="https://asanro.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:bg-emerald-900/20 px-3.5 py-2 rounded-lg transition-colors text-emerald-400 hover:text-emerald-300 flex justify-between items-center text-xs sm:text-sm group/demo"

@@ -105,51 +105,52 @@
     },
     "items": [
       {
-        "id": "elevator-eco",
-        "title": "Elevator Ecosystem",
+        "id": "elevator-ecosystem",
+        "title": "Elevator Ecosystem Monorepo",
         "role": "Lead Full-Stack Developer & System Architect",
-        "organization": "A.manage / Shopbot",
+        "organization": "Enterprise Monorepo",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
-        "demo": "https://web-portal-ivory-nine.vercel.app/",
+        "liveUrl": "https://asanro.com",
+        "demo": "https://asanro.com",
         "description": [
-          "Architected an enterprise Monorepo integrating Next.js/FastAPI web portal and Flutter mobile app.",
-          "Implemented Clean Architecture, BLoC, and offline-first queuing (FIFO).",
-          "Engineered Single Source of Truth backend with PostgreSQL & RBAC."
+          "Enterprise-grade hybrid architecture integrating a Next.js customer web portal, FastAPI core backend, and an offline-first Flutter application for field technicians.",
+          "Strict Clean Architecture implementation with BLoC state management and FIFO offline queue synchronization.",
+          "Centralized single source of truth database with PostgreSQL and role-based access control (RBAC)."
         ],
-        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Clean Architecture"]
       },
       {
-        "id": "asanro",
-        "title": "Corporate Web Platform",
-        "role": "Full-Stack Web Developer",
-        "organization": "Asanro Etminan Amir",
+        "id": "elevator-iot-telemetry",
+        "title": "IoT Elevator Telemetry",
+        "role": "Hardware & IoT Systems Engineer",
+        "organization": "Hardware-to-Cloud System",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "Built a robust web frontend for an elevator installation enterprise.",
-          "Translated brand requirements into a premium corporate aesthetic (Navy/Gold)."
+          "Hardware-to-Cloud telemetry system utilizing C++ (Arduino Edge Node) for high-speed signal extraction via bit-masking, broadcasting real-time faults via MQTT and WebSockets with sub-50ms latency.",
+          "Industrial edge node firmware with hardware watchdogs and non-blocking I/O routines.",
+          "Comprehensive hardware circuit design and virtual simulation verified within Proteus VSM."
         ],
-        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+        "techStack": ["C++", "Arduino", "MQTT", "WebSockets", "Proteus VSM"]
       },
       {
-        "id": "iot-telemetry",
-        "title": "IoT Telemetry System",
-        "role": "Hardware & Software Engineer",
-        "organization": "B.Sc. Thesis Project",
+        "id": "taskflow-app",
+        "title": "TaskFlow Workspace",
+        "role": "Mobile Application Architect",
+        "organization": "Productivity Application",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "Engineered IoT telemetry utilizing C++ (Arduino Edge Node) for high-speed signal extraction.",
-          "Developed a cross-platform Flutter app with WebSocket integration for sub-50ms latency monitoring."
+          "High-performance reactive task management mobile application engineered with Flutter and Dart, featuring local backend logic, SQLite persistence, and robust BLoC state management.",
+          "Fluid gesture-driven user interface with custom animations, dark/light dynamic theming, and responsive layouts.",
+          "Optimized relational database schema ensuring instant query execution and zero frame drops."
         ],
-        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
-      },
-      {
-        "id": "taskflow",
-        "title": "TaskFlow",
-        "role": "Mobile Application Developer",
-        "organization": "Independent Project",
-        "description": [
-          "Designed a high-performance productivity application built entirely with Flutter.",
-          "Implemented reactive state management and robust local data handling."
-        ],
-        "techStack": ["Flutter", "Dart", "State Management"]
+        "techStack": ["Flutter", "Dart", "BLoC Pattern", "SQLite", "UI/UX"]
       }
     ]
   },

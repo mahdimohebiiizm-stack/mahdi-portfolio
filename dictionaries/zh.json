@@ -105,51 +105,52 @@
     },
     "items": [
       {
-        "id": "elevator-eco",
-        "title": "Elevator Ecosystem",
+        "id": "elevator-ecosystem",
+        "title": "Elevator Ecosystem Monorepo",
         "role": "全栈开发负责人兼系统架构师",
-        "organization": "A.manage / Shopbot",
+        "organization": "Enterprise Monorepo",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
-        "demo": "https://web-portal-ivory-nine.vercel.app/",
+        "liveUrl": "https://asanro.com",
+        "demo": "https://asanro.com",
         "description": [
-          "主导企业级 Monorepo 架构，无缝集成 Next.js/FastAPI 门户与 Flutter 移动端。",
-          "贯彻整洁架构、BLoC 状态管理与基于 FIFO 的离线队列机制。",
-          "构建高可靠单数据源（Single Source of Truth）后端，整合 PostgreSQL 与 RBAC 权限。"
+          "企业级混合架构，深度整合 Next.js 客户 Web 门户、FastAPI 核心后端及面向现场运维工程师的 Flutter 离线优先（Offline-First）移动端应用。",
+          "严格落地整洁架构（Clean Architecture），结合 BLoC 状态管理规范与先进的 FIFO 离线队列数据同步机制。",
+          "以 PostgreSQL 构建企业级单一事实来源（Single Source of Truth）核心数据库，集成 RBAC 权限访问控制体系。"
         ],
-        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Clean Architecture"]
       },
       {
-        "id": "asanro",
-        "title": "Corporate Web Platform",
-        "role": "全栈 Web 工程师",
-        "organization": "Asanro Etminan Amir",
+        "id": "elevator-iot-telemetry",
+        "title": "IoT Elevator Telemetry",
+        "role": "软硬件与物联网系统工程师",
+        "organization": "Hardware-to-Cloud System",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "为电梯安装企业构建坚固、高性能的企业级 Web 前端平台。",
-          "将品牌理念转化为奢华商务视觉质感（海军蓝与鎏金配色）。"
+          "端到云（Hardware-to-Cloud）电梯遥测系统，基于 C++（Arduino 边缘节点）通过位掩码（Bit-Masking）高效采集信号，利用 MQTT 与 WebSockets 实现低于 50ms 延迟的实时故障广播。",
+          "工业级边缘固件工程，内置硬件看门狗与非阻塞 I/O 运行机制，保障系统高可靠运行。",
+          "完整的电路原理图设计与基于 Proteus VSM 虚拟仿真验证体系。"
         ],
-        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+        "techStack": ["C++", "Arduino", "MQTT", "WebSockets", "Proteus VSM"]
       },
       {
-        "id": "iot-telemetry",
-        "title": "IoT Telemetry System",
-        "role": "软硬件工程师",
-        "organization": "学士学位毕业设计",
+        "id": "taskflow-app",
+        "title": "TaskFlow Workspace",
+        "role": "移动应用架构师",
+        "organization": "Productivity Application",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "使用 C++（Arduino 边缘节点）研发高速信号采集的物联网遥测系统。",
-          "开发集成 WebSocket 的跨平台 Flutter 应用，实现毫秒级（<50ms）低延迟监控。"
+          "基于 Flutter 与 Dart 深度自研的高性能响应式任务工作区移动端应用，内置本地逻辑引擎、SQLite 强持久化及高可靠 BLoC 状态管理架构。",
+          "基于流畅手势交互与定制级微动效打造的高品质 UI/UX，完美支持动静态双重主题与多屏适配。",
+          "深度优化的关系型数据结构设计，保障瞬时查询响应与极致的 60fps 零掉帧丝滑体验。"
         ],
-        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
-      },
-      {
-        "id": "taskflow",
-        "title": "TaskFlow",
-        "role": "移动应用工程师",
-        "organization": "独立开发项目",
-        "description": [
-          "纯 Flutter 打造的高性能效能管理应用。",
-          "深度集成响应式状态管理机制与高鲁棒性本地数据持久化。"
-        ],
-        "techStack": ["Flutter", "Dart", "State Management"]
+        "techStack": ["Flutter", "Dart", "BLoC Pattern", "SQLite", "UI/UX"]
       }
     ]
   },

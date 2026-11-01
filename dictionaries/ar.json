@@ -105,51 +105,52 @@
     },
     "items": [
       {
-        "id": "elevator-eco",
-        "title": "Elevator Ecosystem",
+        "id": "elevator-ecosystem",
+        "title": "Elevator Ecosystem Monorepo",
         "role": "مطور رئيسي ومهندس أنظمة",
-        "organization": "A.manage / Shopbot",
+        "organization": "Enterprise Monorepo",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
-        "demo": "https://web-portal-ivory-nine.vercel.app/",
+        "liveUrl": "https://asanro.com",
+        "demo": "https://asanro.com",
         "description": [
-          "هندسة مستودع موحد (Monorepo) يجمع بين بوابة Next.js/FastAPI وتطبيق Flutter.",
-          "تطبيق Clean Architecture ونمط BLoC وتدفق بيانات Offline-First بترتيب FIFO.",
-          "بناء خلفية موحدة موثوقة (Single Source of Truth) مع PostgreSQL ونظام صلاحيات RBAC."
+          "بنية هجينة متطورة على مستوى المؤسسات تدمج بوابة عملاء ويب بـ Next.js، ونواة خلفية بـ FastAPI، وتطبيق جوال Flutter يعمل دون اتصال (Offline-First) للفنيين الميدانيين.",
+          "تطبيق صارم لمعمارية Clean Architecture مع إدارة الحالة بنمط BLoC ومزامنة قوائم الانتظار في وضع عدم الاتصال (FIFO).",
+          "قاعدة بيانات مركزية موحدة (Single Source of Truth) باستخدام PostgreSQL ونظام متقدم للتحكم في الصلاحيات (RBAC)."
         ],
-        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Clean Architecture"]
       },
       {
-        "id": "asanro",
-        "title": "Corporate Web Platform",
-        "role": "مطور واجهات وتطبيقات الويب",
-        "organization": "Asanro Etminan Amir",
-        "description": [
-          "تطوير منصة ويب متينة لمؤسسة هندسة وتركيب المصاعد.",
-          "ترجمة متطلبات الهوية التجارية إلى تجربة بصرية فاخرة (Navy/Gold)."
-        ],
-        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
-      },
-      {
-        "id": "iot-telemetry",
-        "title": "IoT Telemetry System",
+        "id": "elevator-iot-telemetry",
+        "title": "IoT Elevator Telemetry",
         "role": "مهندس برمجيات وعتاد",
-        "organization": "مشروع تخرج البكالوريوس",
+        "organization": "Hardware-to-Cloud System",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "هندسة نظام قياس عن بُعد (IoT) باستخدام C++ (Arduino Edge) لاستخراج الإشارات بسرعة فائقة.",
-          "تطوير تطبيق Flutter مدمج مع WebSockets لمراقبة البيانات بزمن استجابة أقل من 50 مللي ثانية."
+          "نظام تتبع عن بعد يربط العتاد بالسحابة (Hardware-to-Cloud) بلغة C++ (عقدة حافة Arduino) لاستخراج الإشارات فائقة السرعة عبر تقنية Bit-Masking وبث الأعطال عبر MQTT وWebSockets بتأخير أقل من 50 مللي ثانية.",
+          "برمجيات مدمجة صناعية قوية تدعم مراقبة العتاد (Watchdogs) وعمليات الإدخال/الإخراج غير المعطلة.",
+          "تصميم دارات عتادية متكامل ومحاكاة دقيقة للأنظمة عبر بيئة Proteus VSM."
         ],
-        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
+        "techStack": ["C++", "Arduino", "MQTT", "WebSockets", "Proteus VSM"]
       },
       {
-        "id": "taskflow",
-        "title": "TaskFlow",
+        "id": "taskflow-app",
+        "title": "TaskFlow Workspace",
         "role": "مطور تطبيقات الهواتف الذكية",
-        "organization": "مشروع مستقل",
+        "organization": "Productivity Application",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "تصميم تطبيق إنتاجية عالي الكفاءة مبني بالكامل بواسطة Flutter.",
-          "تطبيق إدارة الحالة التفاعلية والتخزين المحلي الموثوق للبيانات."
+          "تطبيق جوال تفاعلي عالي الأداء لإدارة المهام ومساحات العمل مطور بتقنيات Flutter وDart، يتميز بمنطق معالجة محلي، وتخزين دائم عبر SQLite، وإدارة حالة قوية بنمط BLoC.",
+          "واجهة مستخدم مرنة تعتمد على الإيماءات، وحركات تفاعلية سلسة، وتصميم مستجيب يدعم السمات الديناميكية.",
+          "هيكلة قواعد بيانات علائقية محسنة تضمن سرعة استرجاع فورية للبيانات وأداء سلس بنسبة 60 إطاراً في الثانية."
         ],
-        "techStack": ["Flutter", "Dart", "State Management"]
+        "techStack": ["Flutter", "Dart", "BLoC Pattern", "SQLite", "UI/UX"]
       }
     ]
   },

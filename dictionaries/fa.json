@@ -105,51 +105,52 @@
     },
     "items": [
       {
-        "id": "elevator-eco",
-        "title": "Elevator Ecosystem",
+        "id": "elevator-ecosystem",
+        "title": "Elevator Ecosystem Monorepo",
         "role": "Lead Full-Stack Developer & System Architect",
-        "organization": "A.manage / Shopbot",
+        "organization": "Enterprise Monorepo",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
-        "demo": "https://web-portal-ivory-nine.vercel.app/",
+        "liveUrl": "https://asanro.com",
+        "demo": "https://asanro.com",
         "description": [
-          "معماری مونو‌ریپوی سازمانی یکپارچه‌کننده پورتال وب Next.js/FastAPI و اپلیکیشن موبایل Flutter.",
-          "پیاده‌سازی Clean Architecture، الگوی BLoC و صف‌بندی Offline-First با ساختار FIFO.",
-          "مهندسی بک‌اند تک‌مرجع (Single Source of Truth) با PostgreSQL و کنترل دسترسی RBAC."
+          "معماری هیبریدی سازمانی یکپارچه‌کننده پورتال وب مشتریان با Next.js، بک‌اند مرکزی FastAPI و اپلیکیشن موبایل Offline-First با Flutter برای تکنسین‌های فنی.",
+          "پیاده‌سازی دقیق Clean Architecture با الگوی BLoC و سیستم صف‌بندی آفلاین با ساختار FIFO.",
+          "پایگاه داده تک‌مرجع (Single Source of Truth) با PostgreSQL و کنترل دسترسی سطوح سازمانی (RBAC)."
         ],
-        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Monorepo"]
+        "techStack": ["Next.js", "FastAPI", "Flutter", "PostgreSQL", "Clean Architecture"]
       },
       {
-        "id": "asanro",
-        "title": "Corporate Web Platform",
-        "role": "Full-Stack Web Developer",
-        "organization": "Asanro Etminan Amir",
+        "id": "elevator-iot-telemetry",
+        "title": "IoT Elevator Telemetry",
+        "role": "Hardware & IoT Systems Engineer",
+        "organization": "Hardware-to-Cloud System",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "توسعه فرانت‌اند وب پایدار و پرفورمنس‌محور برای سازمان مهندسی و نصب آسانسور.",
-          "پیاده‌سازی هویت بصری لوکس سازمانی (سرمه‌ای و طلایی) منطبق بر استانداردهای برند."
+          "سیستم تله‌متری Hardware-to-Cloud مبتنی بر C++ (نود لبه آردوینو) جهت استخراج پرسرعت سیگنال‌ها با تکنیک Bit-Masking و مخابره بلادرنگ خطاهای آسانسور از طریق MQTT و WebSockets با تأخیر زیر ۵۰ میلی‌ثانیه.",
+          "توسعه سفت‌افزار صنعتی مقاوم با واچ‌داگ‌های سخت‌افزاری و روتین‌های غیرمسدودکننده (Non-blocking I/O).",
+          "طراحی مدارهای الکترونیکی و شبیه‌سازی کامل سیگنال‌ها در محیط Proteus VSM."
         ],
-        "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS"]
+        "techStack": ["C++", "Arduino", "MQTT", "WebSockets", "Proteus VSM"]
       },
       {
-        "id": "iot-telemetry",
-        "title": "IoT Telemetry System",
-        "role": "Hardware & Software Engineer",
-        "organization": "B.Sc. Thesis Project",
+        "id": "taskflow-app",
+        "title": "TaskFlow Workspace",
+        "role": "Mobile Application Architect",
+        "organization": "Productivity Application",
+        "githubUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
+        "liveUrl": null,
+        "demo": null,
         "description": [
-          "مهندسی سیستم تله‌متری IoT با C++ (نود لبه آردوینو) جهت استخراج پرسرعت سیگنال‌ها.",
-          "توسعه اپلیکیشن چندسکویی Flutter با یکپارچه‌سازی WebSocket برای پایش بلادرنگ با تأخیر زیر ۵۰ میلی‌ثانیه."
+          "اپلیکیشن موبایل مدیریت هوشمند وظایف با عملکرد بالا و معماری واکنش‌گرا مبتنی بر Flutter و Dart، مجهز به منطق پردازش بک‌اند محلی، ماندگاری داده‌ها با SQLite و الگوی BLoC.",
+          "رابط کاربری روان مبتنی بر جسچر و انیمیشن‌های سفارشی همراه با سیستم تم پویا و طراحی واکنش‌گرا.",
+          "مدل‌سازی بهینه داده‌های رابطه‌ای برای اجرای آنی کوئری‌ها بدون افت فریم (Zero Frame Drops)."
         ],
-        "techStack": ["C++", "Arduino", "Flutter", "WebSockets"]
-      },
-      {
-        "id": "taskflow",
-        "title": "TaskFlow",
-        "role": "Mobile Application Developer",
-        "organization": "Independent Project",
-        "description": [
-          "طراحی و پیاده‌سازی اپلیکیشن مدیریت تسک با کارایی بالا به صورت کامل با Flutter.",
-          "پیاده‌سازی مدیریت وضعیت واکنش‌گرا و ذخیره‌سازی محلی مقاوم داده‌ها."
-        ],
-        "techStack": ["Flutter", "Dart", "State Management"]
+        "techStack": ["Flutter", "Dart", "BLoC Pattern", "SQLite", "UI/UX"]
       }
     ]
   },

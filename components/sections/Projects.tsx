@@ -22,16 +22,26 @@ export default function Projects({ dict }: ProjectsProps) {
           />
         </FadeInUp>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16 min-w-0 max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-16 min-w-0 max-w-full">
           {dict.items.map((project, index) => {
             const projectLink =
-              "link" in project && typeof project.link === "string"
+              "githubUrl" in project && typeof project.githubUrl === "string" && project.githubUrl
+                ? project.githubUrl
+                : "link" in project && typeof project.link === "string" && project.link
                 ? project.link
                 : undefined;
             const demoLink =
-              "demo" in project && typeof project.demo === "string"
+              "liveUrl" in project && typeof project.liveUrl === "string" && project.liveUrl
+                ? project.liveUrl
+                : "demo" in project && typeof project.demo === "string" && project.demo
                 ? project.demo
                 : undefined;
+
+            const descriptions = Array.isArray(project.description)
+              ? project.description
+              : typeof project.description === "string"
+              ? [project.description]
+              : [];
 
             return (
               <FadeInUp
@@ -106,7 +116,7 @@ export default function Projects({ dict }: ProjectsProps) {
                     {/* Card Body - Bulleted Descriptions */}
                     <div className="my-6">
                       <ul className="space-y-2.5 list-disc ps-5 marker:text-gold text-slate-300 text-sm leading-relaxed">
-                        {project.description.map((item, idx) => (
+                        {descriptions.map((item, idx) => (
                           <li key={idx}>
                             <HighlightedText text={item} />
                           </li>
