@@ -7,7 +7,8 @@
     "allProjects": "جميع المشاريع",
     "elevatorProject": "منظومة المصاعد",
     "liveDemo": "معاينة حية",
-    "sourceCode": "الكود المصدري"
+    "sourceCode": "الكود المصدري",
+    "viewDetails": "التفاصيل"
   },
   "hero": {
     "statusBadge": "متاح للمشاريع المؤسسية",
@@ -103,6 +104,11 @@
       "accentWord": "البارزة",
       "subtitle": "تجارب مؤسسية وهندسة معمارية للأنظمة القابلة للتوسع"
     },
+    "sourceCode": "سورس كود",
+    "liveDemo": "معاينة حية",
+    "viewDetails": "عرض التفاصيل",
+    "productionBadge": "نسخة الإنتاج",
+    "publicRepoBadge": "مستودع عام",
     "items": [
       {
         "id": "elevator-ecosystem",

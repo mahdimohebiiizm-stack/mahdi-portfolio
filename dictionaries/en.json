@@ -7,7 +7,8 @@
     "allProjects": "All Projects",
     "elevatorProject": "Elevator Ecosystem",
     "liveDemo": "Live Demo",
-    "sourceCode": "Source Code"
+    "sourceCode": "Source Code",
+    "viewDetails": "Details"
   },
   "hero": {
     "statusBadge": "Available for Enterprise Projects",
@@ -103,6 +104,11 @@
       "accentWord": "Projects",
       "subtitle": "Enterprise experience and scalable systems architecture"
     },
+    "sourceCode": "Source Code",
+    "liveDemo": "Live Demo",
+    "viewDetails": "View Details",
+    "productionBadge": "Production Live",
+    "publicRepoBadge": "Public Repo",
     "items": [
       {
         "id": "elevator-ecosystem",

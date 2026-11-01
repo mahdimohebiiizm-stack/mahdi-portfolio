@@ -7,7 +7,8 @@
     "allProjects": "Все проекты",
     "elevatorProject": "Экосистема лифтов",
     "liveDemo": "Демо онлайн",
-    "sourceCode": "Исходный код"
+    "sourceCode": "Исходный код",
+    "viewDetails": "Детали"
   },
   "hero": {
     "statusBadge": "Открыт для корпоративных проектов",
@@ -103,6 +104,11 @@
       "accentWord": "проекты",
       "subtitle": "Корпоративный опыт и архитектура масштабируемых систем"
     },
+    "sourceCode": "Исходный код",
+    "liveDemo": "Демо онлайн",
+    "viewDetails": "Подробнее",
+    "productionBadge": "Продакшн",
+    "publicRepoBadge": "Открытый репозиторий",
     "items": [
       {
         "id": "elevator-ecosystem",

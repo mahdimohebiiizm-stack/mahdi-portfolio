@@ -7,7 +7,8 @@
     "allProjects": "全部项目",
     "elevatorProject": "智能电梯生态",
     "liveDemo": "在线演示",
-    "sourceCode": "源代码"
+    "sourceCode": "源代码",
+    "viewDetails": "详情"
   },
   "hero": {
     "statusBadge": "可承接企业级项目",
@@ -103,6 +104,11 @@
       "accentWord": "精选",
       "subtitle": "企业级实战经验与高可扩展系统架构落地"
     },
+    "sourceCode": "源代码",
+    "liveDemo": "在线演示",
+    "viewDetails": "查看详情",
+    "productionBadge": "生产级上线",
+    "publicRepoBadge": "开源仓库",
     "items": [
       {
         "id": "elevator-ecosystem",

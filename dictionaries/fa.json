@@ -7,7 +7,8 @@
     "allProjects": "همه پروژه‌ها",
     "elevatorProject": "اکوسیستم آسانرو",
     "liveDemo": "پیش‌نمایش زنده",
-    "sourceCode": "سورس کد"
+    "sourceCode": "سورس کد",
+    "viewDetails": "جزییات"
   },
   "hero": {
     "statusBadge": "Available for Enterprise Projects",
@@ -103,6 +104,11 @@
       "accentWord": "برجسته",
       "subtitle": "تجربیات سازمانی و معماری سیستم‌های مقیاس‌پذیر"
     },
+    "sourceCode": "سورس کد",
+    "liveDemo": "پیش‌نمایش زنده",
+    "viewDetails": "مشاهده جزییات",
+    "productionBadge": "نسخه پروداکشن",
+    "publicRepoBadge": "مخزن عمومی",
     "items": [
       {
         "id": "elevator-ecosystem",
