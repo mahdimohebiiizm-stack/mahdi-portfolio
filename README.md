@@ -1,19 +1,21 @@
-# 🌐 [VIEW LIVE ENTERPRISE PORTFOLIO](https://mahdi-portfolio-cyan.vercel.app/)
+<div align="center">
+  <a href="https://mahdi-portfolio-cyan.vercel.app/" target="_blank">
+    <img src="docs/assets/hero-banner.png" alt="Mahdi Mohebi Nia - Enterprise Portfolio" width="100%" />
+  </a>
+</div>
 
-[![Mahdi Mohebi Nia - Enterprise Portfolio](docs/assets/hero-banner.png)](https://mahdi-portfolio-cyan.vercel.app/)
+<h1 align="center">Mahdi Mohebi Nia | Enterprise Portfolio & Platform</h1>
+
+<h3 align="center"><i>Architecting Scalable, Zero-Debt Enterprise Solutions</i></h3>
 
 <div align="center">
-
-[![Production Deployment](https://img.shields.io/badge/Production%20Deployment-Vercel%20Live-00C7B7?style=for-the-badge&logo=vercel&logoColor=white)](https://mahdi-portfolio-cyan.vercel.app/)
-[![Next.js](https://img.shields.io/badge/Next.js-16.4.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19.3.0-20232A?style=for-the-badge&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![i18n](https://img.shields.io/badge/i18n-5%20Locales%20(FA%20%7C%20EN%20%7C%20AR%20%7C%20ZH%20%7C%20RU)-D4AF37?style=for-the-badge)](https://mahdi-portfolio-cyan.vercel.app/)
-[![Docker](https://img.shields.io/badge/Docker-Multi--Stage_Alpine-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
-[![CI](https://img.shields.io/badge/CI-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions)](https://github.com/)
-
+  <a href="https://mahdi-portfolio-cyan.vercel.app/"><img src="https://img.shields.io/badge/Production_Deployment-VERCEL_LIVE-000000?style=for-the-badge&logo=vercel" alt="Vercel Live" /></a>
+  <a href="https://github.com/mahdimohebiizm-stack/mahdi-portfolio/actions"><img src="https://img.shields.io/badge/CI/CD-GITHUB_ACTIONS-2088FF?style=for-the-badge&logo=github-actions" alt="CI/CD" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Lighthouse_Score-100%25-00CC66?style=for-the-badge&logo=lighthouse" alt="Lighthouse 100" /></a>
 </div>
+<br/>
+
+> **Executive Summary:** An enterprise-grade, high-performance personal platform engineered with Next.js 16 App Router, React 19 Server Components, Tailwind CSS v4, and a dynamic 5-locale architecture. Built strictly on the Zero Technical Debt paradigm.
 
 <div align="center">
   <br />
@@ -24,12 +26,6 @@
 </div>
 
 <a name="english-version"></a>
-
----
-
-# Mahdi Mohebi Nia | Enterprise Portfolio & Platform
-
-An enterprise-grade, high-performance personal platform and technical portfolio engineered with Next.js 16 App Router, React 19 Server Components, Tailwind CSS v4, dynamic multi-language architecture (5 locales), and an Offline-First Progressive Web App (PWA) infrastructure. The platform strictly adheres to the **Zero Technical Debt** paradigm and Clean Architecture principles.
 
 ---
 
