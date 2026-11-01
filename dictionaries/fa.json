@@ -3,7 +3,11 @@
     "brand": "M.M.NIA",
     "skills": "مهارت‌ها",
     "projects": "پروژه‌ها",
-    "contact": "تماس با من"
+    "contact": "تماس با من",
+    "allProjects": "همه پروژه‌ها",
+    "elevatorProject": "اکوسیستم آسانرو",
+    "liveDemo": "پیش‌نمایش زنده",
+    "sourceCode": "سورس کد"
   },
   "hero": {
     "statusBadge": "Available for Enterprise Projects",

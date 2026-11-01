@@ -3,7 +3,11 @@
     "brand": "M.M.NIA",
     "skills": "المهارات",
     "projects": "المشاريع",
-    "contact": "اتصل بي"
+    "contact": "اتصل بي",
+    "allProjects": "جميع المشاريع",
+    "elevatorProject": "منظومة المصاعد",
+    "liveDemo": "معاينة حية",
+    "sourceCode": "الكود المصدري"
   },
   "hero": {
     "statusBadge": "متاح للمشاريع المؤسسية",

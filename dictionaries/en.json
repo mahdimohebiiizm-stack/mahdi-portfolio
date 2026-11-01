@@ -3,7 +3,11 @@
     "brand": "M.M.NIA",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact Me"
+    "contact": "Contact Me",
+    "allProjects": "All Projects",
+    "elevatorProject": "Elevator Ecosystem",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code"
   },
   "hero": {
     "statusBadge": "Available for Enterprise Projects",

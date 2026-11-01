@@ -3,7 +3,11 @@
     "brand": "M.M.NIA",
     "skills": "Навыки",
     "projects": "Проекты",
-    "contact": "Связаться"
+    "contact": "Связаться",
+    "allProjects": "Все проекты",
+    "elevatorProject": "Экосистема лифтов",
+    "liveDemo": "Демо онлайн",
+    "sourceCode": "Исходный код"
   },
   "hero": {
     "statusBadge": "Открыт для корпоративных проектов",
