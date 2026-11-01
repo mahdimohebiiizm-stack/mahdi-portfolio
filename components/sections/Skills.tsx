@@ -126,13 +126,22 @@ export default function Skills({ dict }: SkillsProps) {
                 </div>
 
                 <div className="flex flex-wrap gap-2 pt-4 border-t border-gold/10">
-                  {domain.skills.map((skill) => {
+                  {(domain.id === "frontend-uiux" &&
+                  !domain.skills.some((s) => s.includes("PWA"))
+                    ? [...domain.skills, "PWA (Progressive Web App)"]
+                    : domain.skills
+                  ).map((skill) => {
                     const isArchitectureHighlight = skill === "Clean Architecture";
+                    const isPwaHighlight =
+                      skill === "PWA (Progressive Web App)" ||
+                      skill.startsWith("PWA");
+                    const isProminent = isArchitectureHighlight || isPwaHighlight;
+
                     return (
                       <span
                         key={skill}
                         className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium transition-all ${
-                          isArchitectureHighlight
+                          isProminent
                             ? "bg-gold/15 border border-gold/40 text-gold font-bold shadow-sm shadow-gold/20 scale-[1.03]"
                             : "bg-navy border border-navy-light text-slate-300 hover:border-gold/30 hover:text-white"
                         }`}
