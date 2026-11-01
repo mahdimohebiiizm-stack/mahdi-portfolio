@@ -82,6 +82,7 @@
         "role": "Lead Full-Stack Developer & System Architect",
         "organization": "A.manage / Shopbot",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
+        "demo": "https://web-portal-ivory-nine.vercel.app/",
         "description": [
           "Architected an enterprise Monorepo integrating Next.js/FastAPI web portal and Flutter mobile app.",
           "Implemented Clean Architecture, BLoC, and offline-first queuing (FIFO).",

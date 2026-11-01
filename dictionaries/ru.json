@@ -82,6 +82,7 @@
         "role": "Ведущий Full-Stack разработчик и архитектор",
         "organization": "A.manage / Shopbot",
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
+        "demo": "https://web-portal-ivory-nine.vercel.app/",
         "description": [
           "Архитектура корпоративного монорепозитория: портал Next.js/FastAPI и мобильное приложение Flutter.",
           "Реализация Clean Architecture, паттерна BLoC и очереди Offline-First (FIFO).",
