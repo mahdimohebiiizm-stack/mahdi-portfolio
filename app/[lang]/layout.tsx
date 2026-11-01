@@ -54,6 +54,10 @@ export async function generateMetadata({
       "React",
       "Flutter",
       "FastAPI",
+      "Python",
+      "Arduino",
+      "IoT",
+      "Edge Computing",
       "Clean Architecture",
       "Tailwind CSS",
       "TypeScript",
@@ -83,20 +87,11 @@ export async function generateMetadata({
           ? "ru_RU"
           : "en_US",
       type: "website",
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og-image.png"],
     },
   };
 }

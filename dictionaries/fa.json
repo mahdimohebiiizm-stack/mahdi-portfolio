@@ -16,6 +16,8 @@
     "description": "طراحی و پیاده‌سازی سیستم‌های مقیاس‌پذیر، امن و پرفورمنس‌محور مبتنی بر Clean Architecture، با تمرکز بر اکوسیستم‌های Next.js و Flutter در کلاس سازمانی.",
     "projectsBtn": "مشاهده پروژه‌ها",
     "resumeBtn": "دانلود رزومه",
+    "resumePdf": "نسخه PDF",
+    "resumeDocx": "نسخه Word (DOCX)",
     "terminal": {
       "fileName": "architect-profile.ts",
       "comment": "// Enterprise Software Architect Profile",
@@ -41,21 +43,19 @@
           "React",
           "Tailwind v4",
           "TypeScript",
-          "Clean Architecture",
           "UI/UX Design"
         ]
       },
       {
-        "id": "mobile-iot",
-        "title": "Mobile & IoT",
-        "description": "توسعه اپلیکیشن‌های چندسکویی با معماری BLoC، عملکرد آفلاین و مهندسی سیستم‌های سخت‌افزاری و امبدد.",
+        "id": "mobile-ecosystem",
+        "title": "Mobile Ecosystem",
+        "description": "توسعه اپلیکیشن‌های چندسکویی با معماری BLoC، عملکرد آفلاین و مهندسی سیستم‌های مقیاس‌پذیر.",
         "skills": [
           "Flutter",
           "Dart",
           "BLoC Pattern",
           "Offline-First",
-          "C++",
-          "Arduino / ESP32"
+          "Clean Architecture"
         ]
       },
       {
@@ -64,11 +64,24 @@
         "description": "طراحی سرویس‌های با پایداری بالا، مهندسی دیتابیس‌های رابطه‌ای، امنیت سازمانی و پایپ‌لاین‌های خودکار استقرار.",
         "skills": [
           "FastAPI",
+          "Python",
+          "Clean Architecture",
           "PostgreSQL",
           "Docker",
-          "Monorepo",
-          "CI/CD",
-          "Enterprise Security"
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "hardware-iot",
+        "title": "Hardware & IoT",
+        "description": "مهندسی سیستم‌های امبدد، برنامه‌نویسی میکروکنترلرها، رایانش لبه‌ای (Edge Computing) و پروتکل‌های تله‌متری.",
+        "skills": [
+          "Arduino",
+          "IoT",
+          "Edge Computing",
+          "C++",
+          "ESP32",
+          "Sensors & Telemetry"
         ]
       }
     ]

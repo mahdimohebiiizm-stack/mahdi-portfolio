@@ -16,6 +16,8 @@
     "description": "تصميم وبناء أنظمة برمجية عالية الأداء وقابلة للتوسع وآمنة ترتكز على Clean Architecture، مع التخصص في بيئات Next.js و Flutter للمؤسسات.",
     "projectsBtn": "عرض المشاريع",
     "resumeBtn": "تحميل السيرة الذاتية",
+    "resumePdf": "نسخة PDF",
+    "resumeDocx": "نسخة Word (DOCX)",
     "terminal": {
       "fileName": "architect-profile.ts",
       "comment": "// Enterprise Software Architect Profile",
@@ -41,21 +43,19 @@
           "React",
           "Tailwind v4",
           "TypeScript",
-          "Clean Architecture",
           "UI/UX Design"
         ]
       },
       {
-        "id": "mobile-iot",
-        "title": "Mobile & IoT",
-        "description": "تطوير تطبيقات متعددة المنصات بنمط BLoC، ودعم العمل دون اتصال (Offline-First)، وهندسة الأنظمة المدمجة.",
+        "id": "mobile-ecosystem",
+        "title": "Mobile Ecosystem",
+        "description": "تطوير تطبيقات متعددة المنصات بنمط BLoC، ودعم العمل دون اتصال (Offline-First)، ومعايير Clean Architecture.",
         "skills": [
           "Flutter",
           "Dart",
           "BLoC Pattern",
           "Offline-First",
-          "C++",
-          "Arduino / ESP32"
+          "Clean Architecture"
         ]
       },
       {
@@ -64,11 +64,24 @@
         "description": "هندسة خدمات عالية التوافر، وقواعد بيانات علائقية، وأمان مؤسسي، وخطوط نشر مؤتمتة (CI/CD).",
         "skills": [
           "FastAPI",
+          "Python",
+          "Clean Architecture",
           "PostgreSQL",
           "Docker",
-          "Monorepo",
-          "CI/CD",
-          "Enterprise Security"
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "hardware-iot",
+        "title": "Hardware & IoT",
+        "description": "هندسة العتاد والأنظمة المدمجة، وبرمجة المتحكمات الدقيقة، والحوسبة الطرفية (Edge Computing)، وبروتوكولات القياس عن بعد.",
+        "skills": [
+          "Arduino",
+          "IoT",
+          "Edge Computing",
+          "C++",
+          "ESP32",
+          "Sensors & Telemetry"
         ]
       }
     ]

@@ -16,6 +16,8 @@
     "description": "Designing and implementing scalable, secure, and performance-driven systems based on Clean Architecture, specializing in enterprise Next.js and Flutter ecosystems.",
     "projectsBtn": "View Projects",
     "resumeBtn": "Download Resume",
+    "resumePdf": "PDF Version",
+    "resumeDocx": "Word (DOCX)",
     "terminal": {
       "fileName": "architect-profile.ts",
       "comment": "// Enterprise Software Architect Profile",
@@ -41,21 +43,19 @@
           "React",
           "Tailwind v4",
           "TypeScript",
-          "Clean Architecture",
           "UI/UX Design"
         ]
       },
       {
-        "id": "mobile-iot",
-        "title": "Mobile & IoT",
-        "description": "Cross-platform application engineering with BLoC architecture, offline-first capabilities, and embedded hardware systems.",
+        "id": "mobile-ecosystem",
+        "title": "Mobile Ecosystem",
+        "description": "Cross-platform application engineering with BLoC architecture, offline-first capabilities, and Clean Architecture standards.",
         "skills": [
           "Flutter",
           "Dart",
           "BLoC Pattern",
           "Offline-First",
-          "C++",
-          "Arduino / ESP32"
+          "Clean Architecture"
         ]
       },
       {
@@ -64,11 +64,24 @@
         "description": "High-availability service architecture, relational database engineering, enterprise security, and automated deployment pipelines.",
         "skills": [
           "FastAPI",
+          "Python",
+          "Clean Architecture",
           "PostgreSQL",
           "Docker",
-          "Monorepo",
-          "CI/CD",
-          "Enterprise Security"
+          "CI/CD"
+        ]
+      },
+      {
+        "id": "hardware-iot",
+        "title": "Hardware & IoT",
+        "description": "Embedded hardware engineering, microcontroller firmware, edge computing architectures, and real-time telemetry protocols.",
+        "skills": [
+          "Arduino",
+          "IoT",
+          "Edge Computing",
+          "C++",
+          "ESP32",
+          "Sensors & Telemetry"
         ]
       }
     ]
