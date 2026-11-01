@@ -119,7 +119,7 @@ export default async function RootLayout({
     <html
       lang={validLang}
       dir={isRtl ? "rtl" : "ltr"}
-      className={vazirmatn.variable}
+      className={`${vazirmatn.variable} scroll-smooth`}
     >
       <body
         className={`${vazirmatn.className} min-h-screen flex flex-col font-sans`}

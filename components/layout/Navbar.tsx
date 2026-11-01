@@ -29,17 +29,17 @@ export default function Navbar({ dict, currentLang }: NavbarProps) {
           </a>
 
           {/* Navigation Links, Language Switcher & Action */}
-          <nav className="flex items-center gap-4 sm:gap-6 md:gap-8">
-            <div className="flex items-center gap-5 sm:gap-6 md:gap-8 text-sm font-medium text-slate-300">
+          <nav className="flex items-center gap-2 sm:gap-4 md:gap-6">
+            <div className="flex items-center gap-1 sm:gap-2">
               <a
                 href="#skills"
-                className="transition-colors hover:text-gold"
+                className="px-4 py-2 rounded-full text-sm sm:text-[15px] font-medium text-slate-200 hover:text-gold hover:bg-white/5 active:bg-white/10 transition-all duration-300 tracking-wide"
               >
                 {dict.skills}
               </a>
               <a
                 href="#projects"
-                className="transition-colors hover:text-gold"
+                className="px-4 py-2 rounded-full text-sm sm:text-[15px] font-medium text-slate-200 hover:text-gold hover:bg-white/5 active:bg-white/10 transition-all duration-300 tracking-wide"
               >
                 {dict.projects}
               </a>
@@ -52,7 +52,7 @@ export default function Navbar({ dict, currentLang }: NavbarProps) {
             <a href="#contact">
               <Button
                 variant="outline"
-                className="hidden sm:inline-flex py-2 px-4 text-sm"
+                className="hidden sm:inline-flex py-2 px-5 text-sm font-medium"
               >
                 {dict.contact}
               </Button>
