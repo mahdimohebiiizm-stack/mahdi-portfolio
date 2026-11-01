@@ -61,36 +61,38 @@ export default function Navbar({ dict, currentLang }: NavbarProps) {
                   </svg>
                 </a>
 
-                {/* Dropdown Menu */}
-                <div className="absolute top-full end-0 sm:end-auto sm:start-0 mt-2 hidden group-hover:flex group-focus-within:flex flex-col min-w-[220px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden z-50 before:absolute before:-top-2 before:start-0 before:w-full before:h-2">
-                  <a
-                    href="#projects"
-                    className="hover:bg-white/5 px-4 py-3 transition-colors text-sm text-slate-200 hover:text-white"
-                  >
-                    All Projects
-                  </a>
-                  <a
-                    href="https://github.com/mahdimohebiiizm-stack/elevator-ecosystem"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:bg-white/5 px-4 py-3 transition-colors text-gold hover:text-gold-light flex justify-between items-center text-sm border-t border-white/5"
-                  >
-                    <span>Elevator Ecosystem (Repo)</span>
-                    <svg
-                      className="w-4 h-4 text-gold/80 shrink-0"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      aria-hidden="true"
+                {/* Dropdown Menu (Two-layer padding-bridge to eliminate hover dead zones) */}
+                <div className="absolute top-full start-0 pt-4 hidden group-hover:block group-focus-within:block z-50">
+                  <div className="flex flex-col min-w-[220px] bg-navy-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl overflow-hidden">
+                    <a
+                      href="#projects"
+                      className="hover:bg-white/5 px-4 py-3 transition-colors text-sm text-slate-200 hover:text-white"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
+                      All Projects
+                    </a>
+                    <a
+                      href="https://github.com/mahdimohebiiizm-stack/elevator-ecosystem"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:bg-white/5 px-4 py-3 transition-colors text-gold hover:text-gold-light flex justify-between items-center text-sm border-t border-white/5"
+                    >
+                      <span>Elevator Ecosystem (Repo)</span>
+                      <svg
+                        className="w-4 h-4 text-gold/80 shrink-0"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
