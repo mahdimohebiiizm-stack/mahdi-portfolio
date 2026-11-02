@@ -36,6 +36,8 @@ export default function Projects({ dict }: ProjectsProps) {
               "releaseUrl" in project && typeof project.releaseUrl === "string" && project.releaseUrl
                 ? project.releaseUrl
                 : undefined;
+            const primaryActionUrl = demoLink || releaseLink || projectLink;
+            const isWeb = Boolean(demoLink);
 
             const descriptions = Array.isArray(project.description)
               ? project.description
@@ -147,62 +149,53 @@ export default function Projects({ dict }: ProjectsProps) {
                       />
 
                       <div className="flex items-center rounded-full overflow-hidden border border-gold/30 bg-navy-light/90 shadow-[0_0_15px_rgba(212,175,55,0.15)] ring-1 ring-gold/20 divide-x rtl:divide-x-reverse divide-white/10">
-                        {/* Action CTA: Live Demo OR Download Release */}
-                        {demoLink ? (
-                          <a
-                            href={demoLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 text-xs sm:text-sm font-bold text-emerald-300 hover:text-white bg-emerald-950/40 hover:bg-emerald-900/60 transition-colors group/demo min-w-0"
-                          >
-                            <span className="relative flex h-2 w-2 shrink-0">
-                              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-                            </span>
-                            <span className="truncate">{dict.liveDemo || "Live Demo"}</span>
+                        {/* Action CTA: Always Live Demo Style with Smart Icon Affordance */}
+                        <a
+                          href={primaryActionUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 text-xs sm:text-sm font-bold text-emerald-300 hover:text-white bg-emerald-950/40 hover:bg-emerald-900/60 transition-colors group/demo min-w-0"
+                        >
+                          <span className="relative flex h-2 w-2 shrink-0">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                          </span>
+                          <span className="truncate">{dict.liveDemo || "Live Demo"}</span>
+                          {isWeb ? (
                             <svg
-                              className="w-3.5 h-3.5 text-emerald-400 group-hover/demo:translate-x-0.5 group-hover/demo:-translate-y-0.5 rtl:group-hover/demo:-translate-x-0.5 transition-transform duration-300 shrink-0"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              strokeWidth={2.5}
-                              aria-hidden="true"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                              />
-                            </svg>
-                          </a>
-                        ) : releaseLink ? (
-                          <a
-                            href={releaseLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex-1 inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 text-xs sm:text-sm font-bold text-cyan-300 hover:text-white bg-cyan-950/40 hover:bg-cyan-900/60 transition-colors group/release min-w-0"
-                          >
-                            <span className="relative flex h-2 w-2 shrink-0">
-                              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
-                              <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500" />
-                            </span>
-                            <span className="truncate">{dict.downloadRelease || "Download Release"}</span>
-                            <svg
-                              className="w-3.5 h-3.5 text-cyan-400 group-hover/release:translate-y-0.5 transition-transform duration-300 shrink-0"
+                              className="w-3.5 h-3.5 text-emerald-400 group-hover/demo:rotate-12 transition-transform duration-300 shrink-0"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
                               strokeWidth={2}
                               aria-hidden="true"
                             >
+                              <circle cx="12" cy="12" r="10" />
                               <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                                d="M12 2a14.5 14.5 0 0 0 0 20M12 2a14.5 14.5 0 0 1 0 20M2 12h20"
                               />
                             </svg>
-                          </a>
-                        ) : null}
+                          ) : (
+                            <svg
+                              className="w-3.5 h-3.5 text-emerald-400 group-hover/demo:scale-110 transition-transform duration-300 shrink-0"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                              strokeWidth={2}
+                              aria-hidden="true"
+                            >
+                              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M12 18h.01"
+                                strokeWidth={2.5}
+                              />
+                            </svg>
+                          )}
+                        </a>
 
                         {/* Source CTA: Always GitHub Source Code */}
                         <a
