@@ -7,6 +7,7 @@
     "allProjects": "All Projects",
     "elevatorProject": "Elevator Ecosystem",
     "liveDemo": "Live Demo",
+    "downloadRelease": "Download Release",
     "sourceCode": "Source Code",
     "viewDetails": "Details"
   },
@@ -106,6 +107,7 @@
     },
     "sourceCode": "Source Code",
     "liveDemo": "Live Demo",
+    "downloadRelease": "Download Release",
     "viewDetails": "View Details",
     "productionBadge": "Production Live",
     "publicRepoBadge": "Public Repo",
@@ -119,6 +121,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "liveUrl": "https://asanro.com",
         "demo": "https://asanro.com",
+        "releaseUrl": null,
         "description": [
           "Enterprise-grade hybrid architecture integrating a Next.js customer web portal, FastAPI core backend, and an offline-first Flutter application for field technicians.",
           "Strict Clean Architecture implementation with BLoC state management and FIFO offline queue synchronization.",
@@ -135,6 +138,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry/releases",
         "description": [
           "Hardware-to-Cloud telemetry system utilizing C++ (Arduino Edge Node) for high-speed signal extraction via bit-masking, broadcasting real-time faults via MQTT and WebSockets with sub-50ms latency.",
           "Industrial edge node firmware with hardware watchdogs and non-blocking I/O routines.",
@@ -151,6 +155,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app/releases",
         "description": [
           "High-performance reactive task management mobile application engineered with Flutter and Dart, featuring local backend logic, SQLite persistence, and robust BLoC state management.",
           "Fluid gesture-driven user interface with custom animations, dark/light dynamic theming, and responsive layouts.",

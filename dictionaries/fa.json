@@ -7,6 +7,7 @@
     "allProjects": "همه پروژه‌ها",
     "elevatorProject": "اکوسیستم آسانرو",
     "liveDemo": "پیش‌نمایش زنده",
+    "downloadRelease": "دانلود نسخه",
     "sourceCode": "سورس کد",
     "viewDetails": "جزییات"
   },
@@ -106,6 +107,7 @@
     },
     "sourceCode": "سورس کد",
     "liveDemo": "پیش‌نمایش زنده",
+    "downloadRelease": "دانلود نسخه (Release)",
     "viewDetails": "مشاهده جزییات",
     "productionBadge": "نسخه پروداکشن",
     "publicRepoBadge": "مخزن عمومی",
@@ -119,6 +121,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "liveUrl": "https://asanro.com",
         "demo": "https://asanro.com",
+        "releaseUrl": null,
         "description": [
           "معماری هیبریدی سازمانی یکپارچه‌کننده پورتال وب مشتریان با Next.js، بک‌اند مرکزی FastAPI و اپلیکیشن موبایل Offline-First با Flutter برای تکنسین‌های فنی.",
           "پیاده‌سازی دقیق Clean Architecture با الگوی BLoC و سیستم صف‌بندی آفلاین با ساختار FIFO.",
@@ -135,6 +138,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry/releases",
         "description": [
           "سیستم تله‌متری Hardware-to-Cloud مبتنی بر C++ (نود لبه آردوینو) جهت استخراج پرسرعت سیگنال‌ها با تکنیک Bit-Masking و مخابره بلادرنگ خطاهای آسانسور از طریق MQTT و WebSockets با تأخیر زیر ۵۰ میلی‌ثانیه.",
           "توسعه سفت‌افزار صنعتی مقاوم با واچ‌داگ‌های سخت‌افزاری و روتین‌های غیرمسدودکننده (Non-blocking I/O).",
@@ -151,6 +155,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app/releases",
         "description": [
           "اپلیکیشن موبایل مدیریت هوشمند وظایف با عملکرد بالا و معماری واکنش‌گرا مبتنی بر Flutter و Dart، مجهز به منطق پردازش بک‌اند محلی، ماندگاری داده‌ها با SQLite و الگوی BLoC.",
           "رابط کاربری روان مبتنی بر جسچر و انیمیشن‌های سفارشی همراه با سیستم تم پویا و طراحی واکنش‌گرا.",

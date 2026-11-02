@@ -24,6 +24,30 @@ export type NavbarDict = Dictionary["navbar"];
 export type HeroDict = Dictionary["hero"];
 export type MindsetDict = Dictionary["mindset"];
 export type SkillsDict = Dictionary["skills"];
-export type ProjectsDict = Dictionary["projects"];
+
+export interface ProjectItem {
+  id: string;
+  title: string;
+  role: string;
+  organization: string;
+  githubUrl?: string;
+  link?: string;
+  liveUrl?: string | null;
+  demo?: string | null;
+  releaseUrl?: string | null;
+  description: string[];
+  techStack: string[];
+}
+
+export type ProjectsDict = Omit<Dictionary["projects"], "items"> & {
+  sourceCode?: string;
+  liveDemo?: string;
+  downloadRelease?: string;
+  viewDetails?: string;
+  productionBadge?: string;
+  publicRepoBadge?: string;
+  items: ProjectItem[];
+};
+
 export type ContactDict = Dictionary["contact"];
 export type FooterDict = Dictionary["footer"];

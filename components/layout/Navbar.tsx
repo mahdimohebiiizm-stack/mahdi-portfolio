@@ -99,17 +99,9 @@ export default function Navbar({
                       <hr className="border-white/10 mx-1 -my-0.5" />
                     )}
 
-                    {/* Step C: Dynamic Premium Project Cards */}
-                    <div className="flex flex-col gap-2">
+                    {/* Step C: Dynamic Sleek & Airy Project Rows */}
+                    <div className="flex flex-col gap-1.5">
                       {projects.map((project) => {
-                        const hasLiveUrl = Boolean(
-                          ("liveUrl" in project &&
-                            typeof project.liveUrl === "string" &&
-                            project.liveUrl) ||
-                            ("demo" in project &&
-                              typeof project.demo === "string" &&
-                              project.demo)
-                        );
                         const projectLink =
                           ("githubUrl" in project &&
                             typeof project.githubUrl === "string" &&
@@ -118,7 +110,7 @@ export default function Navbar({
                             typeof project.link === "string" &&
                             project.link) ||
                           "#projects";
-                        const liveLink =
+                        const demoLink =
                           ("liveUrl" in project &&
                             typeof project.liveUrl === "string" &&
                             project.liveUrl) ||
@@ -126,72 +118,32 @@ export default function Navbar({
                             typeof project.demo === "string" &&
                             project.demo) ||
                           undefined;
+                        const releaseLink =
+                          "releaseUrl" in project &&
+                          typeof project.releaseUrl === "string" &&
+                          project.releaseUrl
+                            ? project.releaseUrl
+                            : undefined;
 
                         return (
                           <div
                             key={project.id}
-                            className="flex flex-col gap-2 p-2.5 sm:p-3 rounded-xl border border-white/5 bg-navy/50 hover:bg-navy/80 hover:border-gold/30 transition-all duration-300 group/card"
+                            className="group/row relative flex flex-col gap-1.5 p-2.5 rounded-xl bg-transparent hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
                           >
-                            {/* Project Header: Full Untruncated Title and Status Indicator */}
-                            <div className="flex items-center justify-between gap-2.5">
-                              <span className="font-bold text-xs sm:text-sm text-white group-hover/card:text-gold transition-colors">
-                                {project.title}
-                              </span>
-                              {hasLiveUrl ? (
-                                <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 shrink-0">
-                                  <span className="relative flex h-1.5 w-1.5">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
-                                  </span>
-                                  <span>{dict.liveDemo}</span>
-                                </span>
-                              ) : (
-                                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium text-slate-400 bg-white/5 border border-white/10 shrink-0">
-                                  <span className="h-1 w-1 rounded-full bg-gold/60" />
-                                  <span>{dict.sourceCode}</span>
-                                </span>
-                              )}
-                            </div>
+                            {/* Project Header: Clean Untruncated Title */}
+                            <span className="font-bold text-xs sm:text-sm text-white group-hover/row:text-gold transition-colors">
+                              {project.title}
+                            </span>
 
-                            {/* Dual Split CTAs: Always Source Code + (Live Demo or View Details) */}
-                            <div className="grid grid-cols-2 gap-2 pt-0.5">
-                              {/* CTA 1: Source Code */}
-                              <a
-                                href={projectLink}
-                                target={
-                                  projectLink.startsWith("http")
-                                    ? "_blank"
-                                    : undefined
-                                }
-                                rel={
-                                  projectLink.startsWith("http")
-                                    ? "noopener noreferrer"
-                                    : undefined
-                                }
-                                className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold text-slate-200 bg-white/5 hover:bg-white/15 hover:text-white border border-white/10 hover:border-gold/40 transition-all duration-200 shadow-sm"
-                              >
-                                <svg
-                                  className="w-3.5 h-3.5 text-gold shrink-0 transition-transform group-hover/card:scale-105"
-                                  fill="currentColor"
-                                  viewBox="0 0 24 24"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    fillRule="evenodd"
-                                    clipRule="evenodd"
-                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                  />
-                                </svg>
-                                <span>{dict.sourceCode}</span>
-                              </a>
-
-                              {/* CTA 2: Live Demo or View Details */}
-                              {hasLiveUrl && liveLink ? (
+                            {/* Dual CTAs: Action Button (Demo OR Download Release) + Source Button (GitHub) */}
+                            <div className="flex items-center gap-2 pt-0.5">
+                              {/* Action Button */}
+                              {demoLink ? (
                                 <a
-                                  href={liveLink}
+                                  href={demoLink}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-200 shadow-sm shadow-emerald-950/40"
+                                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold text-emerald-300 hover:text-white bg-emerald-950/60 hover:bg-emerald-900/80 border border-emerald-500/30 hover:border-emerald-400 transition-all duration-200 shadow-sm"
                                 >
                                   <span className="relative flex h-1.5 w-1.5 shrink-0">
                                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
@@ -213,15 +165,24 @@ export default function Navbar({
                                     />
                                   </svg>
                                 </a>
-                              ) : (
+                              ) : releaseLink ? (
                                 <a
-                                  href={`${projectLink}#readme`}
+                                  href={releaseLink}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] sm:text-xs font-medium text-slate-400 hover:text-slate-200 bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-white/10 transition-all duration-200"
+                                  className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold text-cyan-300 hover:text-white bg-cyan-950/60 hover:bg-cyan-900/80 border border-cyan-500/30 hover:border-cyan-400 transition-all duration-200 shadow-sm"
                                 >
+                                  <span className="relative flex h-1.5 w-1.5 shrink-0">
+                                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
+                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-cyan-500" />
+                                  </span>
+                                  <span>
+                                    {"downloadRelease" in dict && dict.downloadRelease
+                                      ? dict.downloadRelease
+                                      : "Download"}
+                                  </span>
                                   <svg
-                                    className="w-3 h-3 text-slate-400 shrink-0"
+                                    className="w-3 h-3 text-cyan-400 shrink-0"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -231,12 +192,41 @@ export default function Navbar({
                                     <path
                                       strokeLinecap="round"
                                       strokeLinejoin="round"
-                                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                                     />
                                   </svg>
-                                  <span>{dict.viewDetails || "Details"}</span>
                                 </a>
-                              )}
+                              ) : null}
+
+                              {/* Source Button: Always GitHub */}
+                              <a
+                                href={projectLink}
+                                target={
+                                  projectLink.startsWith("http")
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  projectLink.startsWith("http")
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
+                                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 hover:border-gold/30 transition-all duration-200"
+                              >
+                                <svg
+                                  className="w-3.5 h-3.5 text-gold shrink-0 transition-transform group-hover/row:scale-105"
+                                  fill="currentColor"
+                                  viewBox="0 0 24 24"
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                  />
+                                </svg>
+                                <span>{dict.sourceCode}</span>
+                              </a>
                             </div>
                           </div>
                         );

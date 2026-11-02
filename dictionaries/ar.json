@@ -7,6 +7,7 @@
     "allProjects": "جميع المشاريع",
     "elevatorProject": "منظومة المصاعد",
     "liveDemo": "معاينة حية",
+    "downloadRelease": "تحميل الإصدار",
     "sourceCode": "الكود المصدري",
     "viewDetails": "التفاصيل"
   },
@@ -106,6 +107,7 @@
     },
     "sourceCode": "سورس كود",
     "liveDemo": "معاينة حية",
+    "downloadRelease": "تحميل الإصدار",
     "viewDetails": "عرض التفاصيل",
     "productionBadge": "نسخة الإنتاج",
     "publicRepoBadge": "مستودع عام",
@@ -119,6 +121,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "liveUrl": "https://asanro.com",
         "demo": "https://asanro.com",
+        "releaseUrl": null,
         "description": [
           "بنية هجينة متطورة على مستوى المؤسسات تدمج بوابة عملاء ويب بـ Next.js، ونواة خلفية بـ FastAPI، وتطبيق جوال Flutter يعمل دون اتصال (Offline-First) للفنيين الميدانيين.",
           "تطبيق صارم لمعمارية Clean Architecture مع إدارة الحالة بنمط BLoC ومزامنة قوائم الانتظار في وضع عدم الاتصال (FIFO).",
@@ -135,6 +138,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry/releases",
         "description": [
           "نظام تتبع عن بعد يربط العتاد بالسحابة (Hardware-to-Cloud) بلغة C++ (عقدة حافة Arduino) لاستخراج الإشارات فائقة السرعة عبر تقنية Bit-Masking وبث الأعطال عبر MQTT وWebSockets بتأخير أقل من 50 مللي ثانية.",
           "برمجيات مدمجة صناعية قوية تدعم مراقبة العتاد (Watchdogs) وعمليات الإدخال/الإخراج غير المعطلة.",
@@ -151,6 +155,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app/releases",
         "description": [
           "تطبيق جوال تفاعلي عالي الأداء لإدارة المهام ومساحات العمل مطور بتقنيات Flutter وDart، يتميز بمنطق معالجة محلي، وتخزين دائم عبر SQLite، وإدارة حالة قوية بنمط BLoC.",
           "واجهة مستخدم مرنة تعتمد على الإيماءات، وحركات تفاعلية سلسة، وتصميم مستجيب يدعم السمات الديناميكية.",

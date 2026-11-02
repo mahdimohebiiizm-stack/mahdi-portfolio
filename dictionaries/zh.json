@@ -7,6 +7,7 @@
     "allProjects": "全部项目",
     "elevatorProject": "智能电梯生态",
     "liveDemo": "在线演示",
+    "downloadRelease": "下载版本",
     "sourceCode": "源代码",
     "viewDetails": "详情"
   },
@@ -106,6 +107,7 @@
     },
     "sourceCode": "源代码",
     "liveDemo": "在线演示",
+    "downloadRelease": "下载发布版本",
     "viewDetails": "查看详情",
     "productionBadge": "生产级上线",
     "publicRepoBadge": "开源仓库",
@@ -119,6 +121,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-ecosystem",
         "liveUrl": "https://asanro.com",
         "demo": "https://asanro.com",
+        "releaseUrl": null,
         "description": [
           "企业级混合架构，深度整合 Next.js 客户 Web 门户、FastAPI 核心后端及面向现场运维工程师的 Flutter 离线优先（Offline-First）移动端应用。",
           "严格落地整洁架构（Clean Architecture），结合 BLoC 状态管理规范与先进的 FIFO 离线队列数据同步机制。",
@@ -135,6 +138,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/elevator-iot-telemetry/releases",
         "description": [
           "端到云（Hardware-to-Cloud）电梯遥测系统，基于 C++（Arduino 边缘节点）通过位掩码（Bit-Masking）高效采集信号，利用 MQTT 与 WebSockets 实现低于 50ms 延迟的实时故障广播。",
           "工业级边缘固件工程，内置硬件看门狗与非阻塞 I/O 运行机制，保障系统高可靠运行。",
@@ -151,6 +155,7 @@
         "link": "https://github.com/mahdimohebiiizm-stack/taskflow-app",
         "liveUrl": null,
         "demo": null,
+        "releaseUrl": "https://github.com/mahdimohebiiizm-stack/taskflow-app/releases",
         "description": [
           "基于 Flutter 与 Dart 深度自研的高性能响应式任务工作区移动端应用，内置本地逻辑引擎、SQLite 强持久化及高可靠 BLoC 状态管理架构。",
           "基于流畅手势交互与定制级微动效打造的高品质 UI/UX，完美支持动静态双重主题与多屏适配。",
